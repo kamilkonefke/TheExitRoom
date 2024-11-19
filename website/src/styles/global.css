@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+}
+
+.desktop {
+    background-image: url(/wallpaper.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.taskbar {
+    background-color: #000000;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    height: 32px;
+    width: 100vw;
+    position: absolute;
+}
+
+.taskbar-tab {
+    align-items: center;
+    display: flex;
+    height: 32px;
+    width: 10%; /* kij wie jak to inaczej zrobic (szerokość zakładek na taskbarze) wiec puki co jest tak jak jest XD */
+}
+
+.taskbar-tab-text {
+    color: white;
+    margin-left: 10px;
+}
+
+.taskbar-tab-img {
+    height: 32px;
+    width: 32px;
+}
+
+.desktop-shortcut {
+    text-align: center;
+    margin: 15px;
+    margin-bottom: 32px;
+}
+
+.desktop-shortcut-text {
+    color: white;
+}
+
+.desktop-shortcut-img {
+    height: 32px;
+    width: 32px;
+}

@@ -1,0 +1,8 @@
+---
+const { name, img, id } = Astro.props;
+---
+
+<div class="desktop-shortcut" id={id}>
+    <img src={img} class="desktop-shortcut-img">
+    <p class="desktop-shortcut-text">{name}</p>
+</div>

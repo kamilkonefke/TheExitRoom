@@ -1,0 +1,20 @@
+---
+import Main from '../layouts/main.astro'
+import Desktop from '../layouts/desktop.astro';
+import Taskbar from '../layouts/taskbar.astro';
+import Shortcut from '../components/desktop_shortcut.astro';
+import Tab from '../components/taskbar_tab.astro';
+---
+
+<Main>
+    <Desktop>
+        <Shortcut name="Mango" id="Mango" img="./wallpaper.png"/>
+        <Shortcut name="Banan"/>
+        <Shortcut name="Ogór"/>
+    </Desktop>
+
+    <Taskbar>
+        <Tab name="WEEE"/>
+        <Tab name="EO"/>
+    </Taskbar>
+</Main>
