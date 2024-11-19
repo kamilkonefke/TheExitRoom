@@ -1,5 +1,7 @@
 # probable-octo-fishstick
 
+killme.online
+
 ## TODO:
 - Zagadki
   1. Coiny z silent hill 2
@@ -20,8 +22,11 @@
   - Czerwone, różowe, biale, czarne, fioletowe, niebieskie wszystko
   - Pixeloza
   - Fonty [1](https://www.dafont.com/alagard.font) [2](https://www.dafont.com/edit-undo-dot.font) [3](https://www.dafont.com/dot-digital-7.font) [4](https://www.dafont.com/smalle.font?text=epson) [5](https://www.dafont.com/pixeled-english.font?text=epson)
+  - Clippy który gada ci nic przydatnego (komentuje twoje czyny)
 
  ## LOR:
    - Prywatny detektyw 
    - Na urbex jesteś znalazłeś teczkę
+   - Jesteś na urbex z zlecenia
+   - web SSH
    - Teleleleleo
