@@ -38,7 +38,7 @@
     align-items: center; }
 
 .desktop {
-  background-image: url(/wallpaper.png);
+  background: url(/wallpaper.png) no-repeat center center/cover;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -49,8 +49,7 @@
   .desktop-shortcut {
     cursor: pointer;
     text-align: center;
-    margin: 15px;
-    margin-bottom: 32px; }
+    margin: 15px 15px 32px; }
     .desktop-shortcut-text {
       user-select: none; }
     .desktop-shortcut-img {

@@ -1,5 +1,5 @@
 .desktop {
-    background-image: url(/wallpaper.png);
+    background: url(/wallpaper.png) no-repeat center center / cover;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -7,17 +7,20 @@
     align-items: flex-start;
     flex-direction: column;
     z-index: 0;
+
     &-shortcut {
         cursor: pointer;
         text-align: center;
-        margin: 15px;
-        margin-bottom: 32px;
+        margin: 15px 15px 32px;
+        
         &-text {
             user-select: none;
         }
+
         &-img {
             height: 32px;
             width: 32px;
         }
     }
 }
+
