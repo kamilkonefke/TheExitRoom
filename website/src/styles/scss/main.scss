@@ -1,0 +1,9 @@
+@import "colors.scss";
+@import "taskbar.scss";
+@import "window.scss";
+@import "desktop.scss";
+* {
+    margin: 0;
+    color: $text;
+}
+

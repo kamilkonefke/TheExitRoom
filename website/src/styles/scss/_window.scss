@@ -1,0 +1,19 @@
+.window {
+    position: absolute;
+    background-color: $background;
+    z-index: 2;
+    top: 20vh;
+    left: 30vw;
+    width: 640px;
+    height: 480px;
+    //border:solid 4px $accent;
+    &-bar {
+        padding: 0px 10px;
+        user-select: none;
+        background-color: $accent;
+        height: 32px;
+        cursor: move;
+        display: flex;
+        align-items: center;
+    }
+}

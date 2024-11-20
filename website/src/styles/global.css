@@ -1,73 +1,62 @@
-* {
-    margin: 0;
-    color: white;
-}
-
-.desktop {
-    background-image: url(/wallpaper.png);
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
-    flex-direction: column;
-    z-index: 0;
-}
-
 .taskbar {
-    z-index: 1;
-    background-color: #000000;
-    bottom: 0;
-    display: flex;
-    flex-direction: column;
-    height: 32px;
-    width: 100vw;
-    position: absolute;
-}
-
-.window {
-    position: absolute;
-    background-color: black;
-    z-index: 2;
-    top: 20vh;
-    left: 30vw;
-    width: 640px;
-    height: 480px;
-}
-
-.window-bar {
-    background-color: red;
-    height: 32px;
-    cursor: move;
-}
-
-.taskbar-tab {
+  z-index: 1;
+  background-color: #000;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  height: 32px;
+  width: 100vw;
+  position: absolute;
+  user-select: none; }
+  .taskbar-tab {
+    cursor: pointer;
     align-items: center;
     display: flex;
     height: 32px;
-    width: 10%; /* kij wie jak to inaczej zrobic (szerokość zakładek na taskbarze) wiec puki co jest tak jak jest XD */
-}
+    width: 10%; }
+    .taskbar-tab-text {
+      margin-left: 10px; }
+    .taskbar-tab-img {
+      height: 24px;
+      width: 24px; }
 
-.taskbar-tab-text {
-    margin-left: 10px;
-}
-
-.taskbar-tab-img {
+.window {
+  position: absolute;
+  background-color: #000;
+  z-index: 2;
+  top: 20vh;
+  left: 30vw;
+  width: 640px;
+  height: 480px; }
+  .window-bar {
+    padding: 0px 10px;
+    user-select: none;
+    background-color: #ff0000;
     height: 32px;
-    width: 32px;
-}
+    cursor: move;
+    display: flex;
+    align-items: center; }
 
-.desktop-shortcut {
+.desktop {
+  background-image: url(/wallpaper.png);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  z-index: 0; }
+  .desktop-shortcut {
+    cursor: pointer;
     text-align: center;
     margin: 15px;
-    margin-bottom: 32px;
-}
+    margin-bottom: 32px; }
+    .desktop-shortcut-text {
+      user-select: none; }
+    .desktop-shortcut-img {
+      height: 32px;
+      width: 32px; }
 
-.desktop-shortcut-text {
-
-}
-
-.desktop-shortcut-img {
-    height: 32px;
-    width: 32px;
-}
+* {
+  margin: 0;
+  color: #fff; }
