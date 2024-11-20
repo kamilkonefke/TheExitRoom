@@ -1,20 +1,21 @@
 * {
     margin: 0;
+    color: white;
 }
 
 .desktop {
     background-image: url(/wallpaper.png);
-    background-repeat: no-repeat;
-    background-size: cover;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
     flex-direction: column;
+    z-index: 0;
 }
 
 .taskbar {
+    z-index: 1;
     background-color: #000000;
     bottom: 0;
     display: flex;
@@ -22,6 +23,22 @@
     height: 32px;
     width: 100vw;
     position: absolute;
+}
+
+.window {
+    position: absolute;
+    background-color: black;
+    z-index: 2;
+    top: 20vh;
+    left: 30vw;
+    width: 640px;
+    height: 480px;
+}
+
+.window-bar {
+    background-color: red;
+    height: 32px;
+    cursor: move;
 }
 
 .taskbar-tab {
@@ -32,7 +49,6 @@
 }
 
 .taskbar-tab-text {
-    color: white;
     margin-left: 10px;
 }
 
@@ -48,7 +64,7 @@
 }
 
 .desktop-shortcut-text {
-    color: white;
+
 }
 
 .desktop-shortcut-img {

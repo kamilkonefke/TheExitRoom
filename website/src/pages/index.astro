@@ -2,6 +2,7 @@
 import Main from '../layouts/main.astro'
 import Desktop from '../layouts/desktop.astro';
 import Taskbar from '../layouts/taskbar.astro';
+import Window from '../layouts/window.astro';
 import Shortcut from '../components/desktop_shortcut.astro';
 import Tab from '../components/taskbar_tab.astro';
 ---
@@ -11,6 +12,11 @@ import Tab from '../components/taskbar_tab.astro';
         <Shortcut name="Mango" id="Mango" img="./wallpaper.png"/>
         <Shortcut name="Banan"/>
         <Shortcut name="Ogór"/>
+
+        <Window title="Okno testowe" id="win">
+            <h1>XD</h1>
+        </Window>
+
     </Desktop>
 
     <Taskbar>
@@ -18,3 +24,18 @@ import Tab from '../components/taskbar_tab.astro';
         <Tab name="EO"/>
     </Taskbar>
 </Main>
+
+<script>
+    const window = document.getElementById("win");
+
+    window?.addEventListener("mousedown", start_drag);
+    window?.addEventListener("mouseup", stop_drag);
+
+    function start_drag() {
+        console.log("START DRAG");
+    }
+
+    function stop_drag() {
+        console.log("STOP DRAG");
+    }
+</script>
