@@ -1,37 +1,58 @@
 .taskbar {
   z-index: 1;
-  background-color: #000;
+  background-color: #000000;
   bottom: 0;
   display: flex;
   flex-direction: column;
-  height: 32px;
+  height: 48px;
   width: 100vw;
   position: absolute;
+  animation: slideInBtm 1.5s ease-in-out;
   user-select: none; }
   .taskbar-tab {
+    margin: 6px;
     cursor: pointer;
     align-items: center;
     display: flex;
     height: 32px;
-    width: 10%; }
+    width: 10%;
+    border-bottom-left-radius: 125px 15px;
+    border-bottom-right-radius: 15px 125px;
+    border-top-left-radius: 15px 125px;
+    border-top-right-radius: 15px 155px;
+    border: 2px solid #b6042a;
+    background-color: #200000;
+    transition: transform 0.3s ease; }
+    .taskbar-tab:hover {
+      transform: scale(1.05); }
     .taskbar-tab-text {
       margin-left: 10px; }
     .taskbar-tab-img {
+      margin-left: 4px;
+      border-bottom-left-radius: 125px 15px;
+      border-bottom-right-radius: 15px 125px;
+      border-top-left-radius: 15px 125px;
+      border-top-right-radius: 15px 155px;
+      border: 1px solid #b6042a;
       height: 24px;
       width: 24px; }
 
 .window {
   position: absolute;
-  background-color: #000;
+  background-color: #000000;
   z-index: 2;
   top: 20vh;
   left: 30vw;
   width: 640px;
-  height: 480px; }
+  height: 480px;
+  border-bottom-left-radius: 15px 125px;
+  border-bottom-right-radius: 155px 15px;
+  border: 2px solid #b6042a;
+  animation: slideIn 1.5s ease-in-out; }
   .window-bar {
     padding: 0px 10px;
     user-select: none;
-    background-color: #ff0000;
+    background-color: #b6042a;
     height: 32px;
     cursor: move;
     display: flex;
@@ -54,7 +75,27 @@
       user-select: none; }
     .desktop-shortcut-img {
       height: 32px;
-      width: 32px; }
+      width: 32px;
+      border-bottom-left-radius: 125px 15px;
+      border-bottom-right-radius: 15px 125px;
+      border-top-left-radius: 15px 125px;
+      border-top-right-radius: 15px 155px;
+      border: 1px solid #b6042a;
+      transition: transform 0.3s ease; }
+      .desktop-shortcut-img:hover {
+        transform: scale(1.15); }
+
+@keyframes slideIn {
+  from {
+    transform: translateY(-100%); }
+  to {
+    transform: translateY(0); } }
+
+@keyframes slideInBtm {
+  from {
+    transform: translateY(100%); }
+  to {
+    transform: translateY(0); } }
 
 * {
   margin: 0;

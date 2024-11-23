@@ -6,7 +6,10 @@
     left: 30vw;
     width: 640px;
     height: 480px;
-    //border:solid 4px $accent;
+    border-bottom-left-radius: 15px 125px;
+    border-bottom-right-radius: 155px 15px;
+    border: 2px solid $accent;
+    animation: slideIn 1.0s ease-in-out;
     &-bar {
         padding: 0px 10px;
         user-select: none;
