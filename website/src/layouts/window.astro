@@ -1,10 +1,10 @@
 ---
-const { title, id } = Astro.props;
+const { name, id } = Astro.props;
 ---
 
 <div class="window" id={id}>
     <div class="window-bar">
-        <p>{title}</p>
+        <p style="pointer-events: none;">{name}</p>
     </div>
     <slot/>
 </div>

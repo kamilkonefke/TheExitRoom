@@ -9,33 +9,52 @@ import Tab from '../components/taskbar_tab.astro';
 
 <Main>
     <Desktop>
-        <Shortcut name="Mango" id="Mango" img="./wallpaper.png"/>
-        <Shortcut name="Banan" img="./test.jpeg"/>
-        <Shortcut name="Ogór" img="./test.jpeg"/>
+        <Shortcut name="Mango" id="Mango" img="./test.jpeg"/>
+        <Shortcut name="Ananas" id="Ananas" img="./test.jpeg"/>
+        <Shortcut name="Truskawka" id="Truskawka" img="./test.jpeg"/>
 
-        <Window title="Okno testowe" id="win">
-            <h1>XD</h1>
-        </Window>
-
+        <Window name="Mango">Mango Mango Mango</Window>
+        <Window name="Arbuz">Arbuz.</Window>
     </Desktop>
 
     <Taskbar>
-        <Tab name="WEEE" img="./test.jpeg"/>
-        <Tab name="EO" img="./test.jpeg"/>
+        <Tab name="Mango" img="./test.jpeg"/>
+        <Tab name="Arbuz" img="./test.jpeg"/>
     </Taskbar>
 </Main>
 
 <script>
-    const window = document.getElementById("win");
+    let pos_x: any;
+    let pos_y: any;
 
-    window?.addEventListener("mousedown", start_drag);
-    window?.addEventListener("mouseup", stop_drag);
+    let current_window: HTMLElement | null = null;
+    const all_windows = document.querySelectorAll(".window-bar");
+    if(all_windows) {
+        all_windows.forEach(element => {
+            element.addEventListener("mousedown", start_drag as EventListener);
+            element.addEventListener("mouseup", stop_drag as EventListener);
+        });
+    }
 
-    function start_drag() {
-        console.log("START DRAG");
+    function start_drag(e: MouseEvent) {
+        current_window = (e.target as HTMLElement).parentNode as HTMLElement;
+        if(current_window) {
+            const rect = current_window.getBoundingClientRect();
+            pos_y = e.clientY - rect.top;
+            pos_x = e.clientX - rect.left;
+        }
+        window.addEventListener("mousemove", drag, true);
     }
 
     function stop_drag() {
-        console.log("STOP DRAG");
+        window.removeEventListener("mousemove", drag, true);
+        current_window = null;
+    }
+
+    function drag(e: MouseEvent) {
+        if(current_window) {
+            current_window.style.top = `${e.clientY - pos_y}px`;
+            current_window.style.left = `${e.clientX - pos_x}px`;
+        }
     }
 </script>
