@@ -2,7 +2,17 @@
 const { name, img, id } = Astro.props;
 ---
 
-<div class="desktop-shortcut" id={id}>
+<div class="desktop-shortcut" id={`${id}-btn`}>
     <img src={img} class="desktop-shortcut-img">
     <p class="desktop-shortcut-text">{name}</p>
 </div>
+
+<script define:vars={{ id }}>
+    document.getElementById(`${id}-btn`).addEventListener("click", open_app);
+
+    function open_app() {
+        let app = document.getElementById(id);
+        app.style.opacity = "1";
+        app.style.pointerEvents = "all";
+    }
+</script>

@@ -5,25 +5,49 @@ import Taskbar from '../layouts/taskbar.astro';
 import Window from '../layouts/window.astro';
 import Shortcut from '../components/desktop_shortcut.astro';
 import Tab from '../components/taskbar_tab.astro';
+
+import WebBrowser from '../layouts/apps/webbrowser.astro';
+import Archives from '../layouts/apps/archives.astro';
+import Logs from '../layouts/apps/logs.astro';
 ---
 
 <Main>
     <Desktop>
-        <Shortcut name="Mango" id="Mango" img="./test.jpeg"/>
-        <Shortcut name="Ananas" id="Ananas" img="./test.jpeg"/>
-        <Shortcut name="Truskawka" id="Truskawka" img="./test.jpeg"/>
+        <Shortcut name="Web Browser" id="webbrowser" img="./test.jpeg"/>
+        <Shortcut name="Archives" id="archives" img="./test.jpeg"/>
+        <Shortcut name="System logs" id="logs" img="./test.jpeg"/>
 
-        <Window name="Mango">Mango Mango Mango</Window>
-        <Window name="Arbuz">Arbuz.</Window>
+        <Window name="Web Browser" id="webbrowser">
+            <WebBrowser></WebBrowser>
+        </Window>
+
+        <Window name="Archives" id="archives">
+            <Archives></Archives>
+        </Window>
+
+        <Window name="System logs" id="logs">
+            <Logs></Logs>
+        </Window>
+
+        <Window name="Test" id="test">
+            <h1>TEST</h1>
+        </Window>
     </Desktop>
 
     <Taskbar>
-        <Tab name="Mango" img="./test.jpeg"/>
-        <Tab name="Arbuz" img="./test.jpeg"/>
+
     </Taskbar>
 </Main>
 
 <script>
+    const windows = document.querySelectorAll<HTMLElement>(".window");
+    if(windows) {
+        windows.forEach(element => {
+            element.style.opacity = "0";
+            element.style.pointerEvents = "none";
+        });
+    }
+
     let pos_x: any;
     let pos_y: any;
 
@@ -42,12 +66,15 @@ import Tab from '../components/taskbar_tab.astro';
             const rect = current_window.getBoundingClientRect();
             pos_y = e.clientY - rect.top;
             pos_x = e.clientX - rect.left;
+            current_window.style.zIndex = "100";
         }
         window.addEventListener("mousemove", drag, true);
     }
 
     function stop_drag() {
         window.removeEventListener("mousemove", drag, true);
+        if(current_window)
+            current_window.style.zIndex = "10"
         current_window = null;
     }
 

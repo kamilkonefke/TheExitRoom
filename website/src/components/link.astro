@@ -1,0 +1,17 @@
+---
+const { id } = Astro.props;
+---
+
+<div id={`${id}-lnk`}>
+    <slot/>
+</div>
+
+<script define:vars={{ id }}>
+    document.getElementById(`${id}-lnk`).addEventListener("click", open_app);
+
+    function open_app() {
+        let app = document.getElementById(id);
+        app.style.opacity = "1";
+        app.style.pointerEvents = "all";
+    }
+</script>
