@@ -1,87 +1,22 @@
 ---
 import Main from '../layouts/main.astro'
 import Desktop from '../layouts/desktop.astro';
-import Taskbar from '../layouts/taskbar.astro';
-import Window from '../layouts/window.astro';
-import Shortcut from '../components/desktop_shortcut.astro';
-import Tab from '../components/taskbar_tab.astro';
-
-import WebBrowser from '../layouts/apps/webbrowser.astro';
-import Archives from '../layouts/apps/archives.astro';
-import Logs from '../layouts/apps/logs.astro';
+import Login from '../layouts/login_window.astro';
+import Icon from '../components/user_icon.astro';
+import Prompt from '../components/pasword_prompt.astro';
 ---
 
 <Main>
     <Desktop>
-        <Shortcut name="Web Browser" id="webbrowser" img="./test.jpeg"/>
-        <Shortcut name="Archives" id="archives" img="./test.jpeg"/>
-        <Shortcut name="System logs" id="logs" img="./test.jpeg"/>
-
-        <Window name="Web Browser" id="webbrowser">
-            <WebBrowser></WebBrowser>
-        </Window>
-
-        <Window name="Archives" id="archives">
-            <Archives></Archives>
-        </Window>
-
-        <Window name="System logs" id="logs">
-            <Logs></Logs>
-        </Window>
-
-        <Window name="Test" id="test">
-            <h1>TEST</h1>
-        </Window>
+        <div class="idc-i-just-want-to-center-a-div">
+            <Login>
+                <Icon icon="../../public/test.jpeg"/>
+                <div>
+                    <p>User</p>
+                    <Prompt id="login" password="ae" destination="main.html"/>
+                </div>
+            </Login>
+        </div>
     </Desktop>
-
-    <Taskbar>
-
-    </Taskbar>
 </Main>
 
-<script>
-    const windows = document.querySelectorAll<HTMLElement>(".window");
-    if(windows) {
-        windows.forEach(element => {
-            element.style.opacity = "0";
-            element.style.pointerEvents = "none";
-        });
-    }
-
-    let pos_x: any;
-    let pos_y: any;
-
-    let current_window: HTMLElement | null = null;
-    const all_windows = document.querySelectorAll(".window-bar");
-    if(all_windows) {
-        all_windows.forEach(element => {
-            element.addEventListener("mousedown", start_drag as EventListener);
-            element.addEventListener("mouseup", stop_drag as EventListener);
-        });
-    }
-
-    function start_drag(e: MouseEvent) {
-        current_window = (e.target as HTMLElement).parentNode as HTMLElement;
-        if(current_window) {
-            const rect = current_window.getBoundingClientRect();
-            pos_y = e.clientY - rect.top;
-            pos_x = e.clientX - rect.left;
-            current_window.style.zIndex = "100";
-        }
-        window.addEventListener("mousemove", drag, true);
-    }
-
-    function stop_drag() {
-        window.removeEventListener("mousemove", drag, true);
-        if(current_window)
-            current_window.style.zIndex = "10"
-        current_window = null;
-    }
-
-    function drag(e: MouseEvent) {
-        if(current_window) {
-            current_window.style.top = `${e.clientY - pos_y}px`;
-            current_window.style.left = `${e.clientX - pos_x}px`;
-        }
-    }
-</script>

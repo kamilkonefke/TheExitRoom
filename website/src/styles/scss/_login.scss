@@ -1,0 +1,69 @@
+.idc-i-just-want-to-center-a-div {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.login-window {
+    background-color: $background;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    border-bottom-left-radius: 125px 15px;
+    border-bottom-right-radius: 15px 125px;
+    border-top-left-radius: 15px 125px;
+    border-top-right-radius: 15px 155px;
+    border: 2px solid $accent;
+    font-weight: bold;
+    font-size: 20px;
+    padding: 40px 100px;
+
+    animation: slideIn 10.0s ease-in-out;
+    & > .user-icon {
+        width: 128px;
+        height: 128px;
+        border: 2px solid $accent;
+        border-bottom-left-radius: 25px 115px;
+        border-bottom-right-radius: 15px 125px;
+        border-top-left-radius: 125px 25px;
+        border-top-right-radius: 15px 155px;
+        margin-right: 20px;
+    }
+}
+.password-prompt {
+    display: flex;
+    align-items: left;
+    & > input {
+        background-color: $bg1;
+
+        border: 2px solid $accent;
+        border-bottom-left-radius: 25px 115px;
+        border-bottom-right-radius: 15px 125px;
+        border-top-left-radius: 125px 25px;
+        border-top-right-radius: 15px 155px;
+
+        width: 128px;
+        height: 24px;
+    }
+    & > button {
+        margin: 0 5px;
+        background-color: $accent;
+
+        border: 2px solid $accent;
+        border-bottom-left-radius: 25px 115px;
+        border-bottom-right-radius: 15px 125px;
+        border-top-left-radius: 125px 25px;
+        border-top-right-radius: 15px 155px;
+
+        width: 30px;
+        height: 30px;
+
+        transition: transform 0.3s ease;
+        &:hover {
+            transform: scale(1.10);
+        }
+    }
+}
