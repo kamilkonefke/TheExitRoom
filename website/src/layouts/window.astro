@@ -4,7 +4,7 @@ const { name, id } = Astro.props;
 
 <div class="window" id={id}>
     <div class="window-bar">
-        <p id={`${id}-close`} style="margin-right: 5px;">X</p>
+        <p id={`${id}-close`} style="margin-right: 5px; cursor: pointer;">X</p>
         <p style="pointer-events: none;">{name}</p>
     </div>
     <slot/>

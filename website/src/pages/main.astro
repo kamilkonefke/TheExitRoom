@@ -35,11 +35,12 @@ import Logs from '../layouts/apps/logs.astro';
     </Desktop>
 
     <Taskbar>
-
+        <Tab name="WEE" img="./test.jpeg"/>
     </Taskbar>
 </Main>
 
 <script>
+    // Hide all windows
     const windows = document.querySelectorAll<HTMLElement>(".window");
     if(windows) {
         windows.forEach(element => {
@@ -48,6 +49,7 @@ import Logs from '../layouts/apps/logs.astro';
         });
     }
 
+    // Drag and drop window
     let pos_x: any;
     let pos_y: any;
 
@@ -66,15 +68,14 @@ import Logs from '../layouts/apps/logs.astro';
             const rect = current_window.getBoundingClientRect();
             pos_y = e.clientY - rect.top;
             pos_x = e.clientX - rect.left;
-            current_window.style.zIndex = "100";
+            // z-index
+            apply_z_index(+current_window.style.zIndex, current_window);
         }
         window.addEventListener("mousemove", drag, true);
     }
 
     function stop_drag() {
         window.removeEventListener("mousemove", drag, true);
-        if(current_window)
-            current_window.style.zIndex = "10"
         current_window = null;
     }
 
@@ -82,6 +83,16 @@ import Logs from '../layouts/apps/logs.astro';
         if(current_window) {
             current_window.style.top = `${e.clientY - pos_y}px`;
             current_window.style.left = `${e.clientX - pos_x}px`;
+        }
+    }
+    
+    // ... yes
+    let z_index_max = 1;
+    function apply_z_index(z: number, win: HTMLElement) {
+        if(z <= z_index_max) {
+            let x = (z_index_max + 1);
+            win.style.zIndex = x.toString();
+            z_index_max = x;
         }
     }
 </script>

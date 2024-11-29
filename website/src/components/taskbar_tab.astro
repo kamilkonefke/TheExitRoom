@@ -1,7 +1,8 @@
 ---
-const { id } = Astro.props;
+const { name, img, id } = Astro.props;
 ---
 
-<div class="password-prompt" id={id}>
-    <input type="password">
+<div class="taskbar-tab" id={id}>
+    <img src={img} class="taskbar-tab-img">
+    <p class="taskbar-tab-text">{name}</p>
 </div>
