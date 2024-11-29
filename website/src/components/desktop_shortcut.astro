@@ -8,9 +8,9 @@ const { name, img, id } = Astro.props;
 </div>
 
 <script define:vars={{ id }}>
-    document.getElementById(`${id}-btn`).addEventListener("click", open_app);
+    document.getElementById(`${id}-btn`).addEventListener("click", open);
 
-    function open_app() {
+    function open() {
         let app = document.getElementById(id);
         app.style.opacity = "1";
         app.style.pointerEvents = "all";

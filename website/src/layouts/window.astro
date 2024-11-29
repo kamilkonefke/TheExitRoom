@@ -7,7 +7,9 @@ const { name, id } = Astro.props;
         <p class="window-bar-close" id={`${id}-close`} style="margin-right: 5px; cursor: pointer;">X</p>
         <p style="pointer-events: none;">{name}</p>
     </div>
-    <slot/>
+    <div style="overflow-y: scroll; height: 420px;">
+        <slot/>
+    </div>
 </div>
 
 <script define:vars={{ id }}>

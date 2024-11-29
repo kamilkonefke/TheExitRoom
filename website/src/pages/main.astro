@@ -6,16 +6,22 @@ import Window from '../layouts/window.astro';
 import Shortcut from '../components/desktop_shortcut.astro';
 import Tab from '../components/taskbar_tab.astro';
 
-import WebBrowser from '../layouts/apps/webbrowser.astro';
-import Archives from '../layouts/apps/archives.astro';
-import Logs from '../layouts/apps/logs.astro';
+import WebBrowser from './content/webbrowser.astro';
+import Archives from './content/archives.astro';
+import Logs from './content/logs.astro';
+
+import Fish from './content/fish.astro';
+import Forum from './content/forum.astro';
+import Library from './content/library.astro';
+import SecureDrop from './content/securedrop.astro';
+import DayToday from './content/daytoday.astro';
 ---
 
 <Main>
     <Desktop>
-        <Shortcut name="Web Browser" id="webbrowser" img="./test.jpeg"/>
-        <Shortcut name="Archives" id="archives" img="./test.jpeg"/>
-        <Shortcut name="System logs" id="logs" img="./test.jpeg"/>
+        <Shortcut name="Web Browser" id="webbrowser" img="./webbrowser.svg"/>
+        <Shortcut name="Archives" id="archives" img="./archives.svg"/>
+        <Shortcut name="System logs" id="logs" img="./logs.svg"/>
 
         <Window name="Web Browser" id="webbrowser">
             <WebBrowser></WebBrowser>
@@ -29,16 +35,37 @@ import Logs from '../layouts/apps/logs.astro';
             <Logs></Logs>
         </Window>
 
-        <Window name="Test" id="test">
-            <h1>TEST</h1>
+        <Window name="Cebulka" id="forum">
+            <Forum></Forum>
+        </Window>
+
+        <Window name="Atlas ryb" id="fish">
+            <Fish></Fish>
+        </Window>
+
+        <Window name="Libary" id="library">
+            <Library></Library>
+        </Window>
+
+        <Window name="Secure Drop" id="securedrop">
+            <SecureDrop></SecureDrop>
+        </Window>
+
+        <Window name="0day.today" id="daytoday">
+            <DayToday></DayToday>
         </Window>
     </Desktop>
 
     <Taskbar>
-        <Tab name="Web Browser" id="webbrowser" img="./test.jpeg"/>
-        <Tab name="Archives" id="archives" img="./test.jpeg"/>
-        <Tab name="System logs" id="logs" img="./test.jpeg"/>
-        <Tab name="test" id="test" img="./test.jpeg"/>
+        <Tab name="Web Browser" id="webbrowser" img="./webbrowser.svg"/>
+        <Tab name="Archives" id="archives" img="./archives.svg"/>
+        <Tab name="System logs" id="logs" img="./logs.svg"/>
+
+        <Tab name="Cebulka" id="forum" img="./webbrowser.svg"/>
+        <Tab name="Atlas Ryb" id="fish" img="./webbrowser.svg"/>
+        <Tab name="Open Library" id="library" img="./webbrowser.svg"/>
+        <Tab name="SecureDrop" id="securedrop" img="./webbrowser.svg"/>
+        <Tab name="0day.today" id="daytoday" img="./webbrowser.svg"/>
     </Taskbar>
 </Main>
 
@@ -99,7 +126,6 @@ import Logs from '../layouts/apps/logs.astro';
         }
     }
     
-    // ... yes
     let z_index_max = 1;
     function apply_z_index(z: number, win: HTMLElement) {
         if(z <= z_index_max) {
