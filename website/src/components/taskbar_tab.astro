@@ -2,7 +2,7 @@
 const { name, img, id } = Astro.props;
 ---
 
-<div class="taskbar-tab" id={id}>
+<div class="taskbar-tab" id={`${id}-tab`}>
     <img src={img} class="taskbar-tab-img">
     <p class="taskbar-tab-text">{name}</p>
 </div>

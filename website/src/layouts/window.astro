@@ -4,19 +4,24 @@ const { name, id } = Astro.props;
 
 <div class="window" id={id}>
     <div class="window-bar">
-        <p id={`${id}-close`} style="margin-right: 5px; cursor: pointer;">X</p>
+        <p class="window-bar-close" id={`${id}-close`} style="margin-right: 5px; cursor: pointer;">X</p>
         <p style="pointer-events: none;">{name}</p>
     </div>
     <slot/>
 </div>
 
 <script define:vars={{ id }}>
-    document.getElementById(`${id}-close`).addEventListener("click", close_window);
+    document.getElementById(`${id}-close`).addEventListener("click", close);
 
-    function close_window() {
+    function close() {
         temp = document.getElementById(id);
         console.log(temp)
         temp.style.opacity = "0";
         temp.style.pointerEvents = "none";
+
+        let tab = document.getElementById(`${id}-tab`);
+        tab.style.opacity = "0";
+        tab.style.pointerEvents = "none";
+        tab.style.position = "absolute";
     }
 </script>

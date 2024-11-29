@@ -35,7 +35,10 @@ import Logs from '../layouts/apps/logs.astro';
     </Desktop>
 
     <Taskbar>
-        <Tab name="WEE" img="./test.jpeg"/>
+        <Tab name="Web Browser" id="webbrowser" img="./test.jpeg"/>
+        <Tab name="Archives" id="archives" img="./test.jpeg"/>
+        <Tab name="System logs" id="logs" img="./test.jpeg"/>
+        <Tab name="test" id="test" img="./test.jpeg"/>
     </Taskbar>
 </Main>
 
@@ -46,6 +49,16 @@ import Logs from '../layouts/apps/logs.astro';
         windows.forEach(element => {
             element.style.opacity = "0";
             element.style.pointerEvents = "none";
+        });
+    }
+
+    // Hide all tabs
+    const tabs = document.querySelectorAll<HTMLElement>(".taskbar-tab");
+    if(tabs) {
+        tabs.forEach(element => {
+            element.style.opacity = "0";
+            element.style.pointerEvents = "none";
+            element.style.position = "absolute";
         });
     }
 

@@ -14,5 +14,10 @@ const { name, img, id } = Astro.props;
         let app = document.getElementById(id);
         app.style.opacity = "1";
         app.style.pointerEvents = "all";
+
+        let tab = document.getElementById(`${id}-tab`);
+        tab.style.opacity = "1";
+        tab.style.pointerEvents = "all";
+        tab.style.position = "unset";
     }
 </script>
