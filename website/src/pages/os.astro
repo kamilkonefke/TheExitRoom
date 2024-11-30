@@ -1,5 +1,5 @@
 ---
-import Maine from '../layouts/main.astro'
+import Main from '../layouts/main.astro';
 import Desktop from '../layouts/desktop.astro';
 import Taskbar from '../layouts/taskbar.astro';
 import Window from '../layouts/window.astro';
@@ -18,7 +18,7 @@ import DayToday from './content/daytoday.astro';
 import Cia from './content/cia.astro';
 ---
 
-<Maine>
+<Main>
     <Desktop>
         <Shortcut name="Web Browser" id="webbrowser" img="./webbrowser.svg"/>
         <Shortcut name="Archives" id="archives" img="./archives.svg"/>
@@ -73,7 +73,7 @@ import Cia from './content/cia.astro';
         <Tab name="0day.today" id="daytoday" img="./webbrowser.svg"/>
         <Tab name="CIA" id="cia" img="./webbrowser.svg"/>
     </Taskbar>
-</Maine>
+</Main>
 
 <script>
     function hide_tabs() {
