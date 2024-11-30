@@ -4,6 +4,9 @@
 @import "desktop.scss";
 @import "animations.scss";
 @import "login.scss";
+@import "webbrowser";
+@import "_link.scss";
+
 * {
     margin: 0;
     color: $text;

@@ -6,7 +6,7 @@ const { id, password, destination } = Astro.props;
     <button id={`${id}-btn`}>></button>
 </div>
 
-<script define:vars={{ id, password, destination }}>
+<script is:inline define:vars={{ id, password, destination }}>
     document.getElementById(`${id}-btn`).addEventListener("click", check_password);
 
     function check_password() {

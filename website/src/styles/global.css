@@ -8,34 +8,39 @@
   width: 100vw;
   position: absolute;
   animation: slideInBtm 1.5s ease-in-out;
-  user-select: none; }
-  .taskbar-tab {
-    margin: 6px;
-    cursor: pointer;
-    align-items: center;
-    display: flex;
-    height: 32px;
-    width: 10%;
-    border-bottom-left-radius: 125px 15px;
-    border-bottom-right-radius: 15px 125px;
-    border-top-left-radius: 15px 125px;
-    border-top-right-radius: 15px 155px;
-    border: 2px solid #b6042a;
-    background-color: #200000;
-    transition: transform 0.3s ease; }
-    .taskbar-tab:hover {
-      transform: scale(1.05); }
-    .taskbar-tab-text {
-      margin-left: 10px; }
-    .taskbar-tab-img {
-      margin-left: 4px;
-      border-bottom-left-radius: 125px 15px;
-      border-bottom-right-radius: 15px 125px;
-      border-top-left-radius: 15px 125px;
-      border-top-right-radius: 15px 155px;
-      border: 1px solid #b6042a;
-      height: 24px;
-      width: 24px; }
+  user-select: none;
+}
+.taskbar-tab {
+  margin: 6px;
+  cursor: pointer;
+  align-items: center;
+  display: flex;
+  height: 32px;
+  width: 10%;
+  border-bottom-left-radius: 125px 15px;
+  border-bottom-right-radius: 15px 125px;
+  border-top-left-radius: 15px 125px;
+  border-top-right-radius: 15px 155px;
+  border: 2px solid #b6042a;
+  background-color: #200000;
+  transition: transform 0.3s ease;
+}
+.taskbar-tab:hover {
+  transform: scale(1.05);
+}
+.taskbar-tab-text {
+  margin-left: 10px;
+}
+.taskbar-tab-img {
+  margin-left: 4px;
+  border-bottom-left-radius: 125px 15px;
+  border-bottom-right-radius: 15px 125px;
+  border-top-left-radius: 15px 125px;
+  border-top-right-radius: 15px 155px;
+  border: 1px solid #b6042a;
+  height: 24px;
+  width: 24px;
+}
 
 .window {
   position: absolute;
@@ -49,18 +54,19 @@
   border-bottom-left-radius: 15px 125px;
   border-bottom-right-radius: 155px 15px;
   border: 2px solid #b6042a;
-  animation: slideIn 1.0s ease-in-out; }
-  .window-bar {
-    padding: 0px 10px;
-    user-select: none;
-    background-color: #b6042a;
-    height: 32px;
-    cursor: move;
-    display: flex;
-    align-items: center; }
+  animation: slideIn 1s ease-in-out;
+}
+.window-bar {
+  padding: 0px 10px;
+  user-select: none;
+  background-color: #b6042a;
+  height: 32px;
+  cursor: move;
+  display: flex;
+  align-items: center;
+}
 
 .desktop {
-  /* background: url(/wallpaper.png) no-repeat center center/cover; */
   background-color: #000000;
   width: 100vw;
   height: 100vh;
@@ -68,43 +74,53 @@
   justify-content: flex-start;
   align-items: flex-start;
   flex-direction: column;
-  z-index: 0; }
-  .desktop-shortcut {
-    cursor: pointer;
-    text-align: center;
-    margin: 15px 15px 32px; }
-    .desktop-shortcut-text {
-      user-select: none; }
-    .desktop-shortcut-img {
-      height: 32px;
-      width: 32px;
-      border-bottom-left-radius: 125px 15px;
-      border-bottom-right-radius: 15px 125px;
-      border-top-left-radius: 15px 125px;
-      border-top-right-radius: 15px 155px;
-      border: 1px solid #b6042a;
-      transition: transform 0.3s ease; }
-      .desktop-shortcut-img:hover {
-        transform: scale(1.15); }
+  z-index: 0;
+}
+.desktop-shortcut {
+  cursor: pointer;
+  text-align: center;
+  margin: 15px 15px 32px;
+}
+.desktop-shortcut-text {
+  user-select: none;
+}
+.desktop-shortcut-img {
+  height: 32px;
+  width: 32px;
+  border-bottom-left-radius: 125px 15px;
+  border-bottom-right-radius: 15px 125px;
+  border-top-left-radius: 15px 125px;
+  border-top-right-radius: 15px 155px;
+  border: 1px solid #b6042a;
+  transition: transform 0.3s ease;
+}
+.desktop-shortcut-img:hover {
+  transform: scale(1.15);
+}
 
 @keyframes slideIn {
   from {
-    transform: translateY(-100%); }
+    transform: translateY(-100%);
+  }
   to {
-    transform: translateY(0); } }
-
+    transform: translateY(0);
+  }
+}
 @keyframes slideInBtm {
   from {
-    transform: translateY(100%); }
+    transform: translateY(100%);
+  }
   to {
-    transform: translateY(0); } }
-
+    transform: translateY(0);
+  }
+}
 .idc-i-just-want-to-center-a-div {
   height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
-  justify-content: center; }
+  justify-content: center;
+}
 
 .login-window {
   background-color: #000000;
@@ -119,43 +135,65 @@
   font-weight: bold;
   font-size: 20px;
   padding: 40px 100px;
-  animation: slideIn 10.0s ease-in-out; }
-  .login-window > .user-icon {
-    width: 128px;
-    height: 128px;
-    border: 2px solid #b6042a;
-    border-bottom-left-radius: 25px 115px;
-    border-bottom-right-radius: 15px 125px;
-    border-top-left-radius: 125px 25px;
-    border-top-right-radius: 15px 155px;
-    margin-right: 20px; }
+  animation: slideIn 10s ease-in-out;
+}
+.login-window > .user-icon {
+  width: 128px;
+  height: 128px;
+  border: 2px solid #b6042a;
+  border-bottom-left-radius: 25px 115px;
+  border-bottom-right-radius: 15px 125px;
+  border-top-left-radius: 125px 25px;
+  border-top-right-radius: 15px 155px;
+  margin-right: 20px;
+}
 
 .password-prompt {
   display: flex;
-  align-items: left; }
-  .password-prompt > input {
-    background-color: #200000;
-    border: 2px solid #b6042a;
-    border-bottom-left-radius: 25px 115px;
-    border-bottom-right-radius: 15px 125px;
-    border-top-left-radius: 125px 25px;
-    border-top-right-radius: 15px 155px;
-    width: 128px;
-    height: 24px; }
-  .password-prompt > button {
-    margin: 0 5px;
-    background-color: #b6042a;
-    border: 2px solid #b6042a;
-    border-bottom-left-radius: 25px 115px;
-    border-bottom-right-radius: 15px 125px;
-    border-top-left-radius: 125px 25px;
-    border-top-right-radius: 15px 155px;
-    width: 30px;
-    height: 30px;
-    transition: transform 0.3s ease; }
-    .password-prompt > button:hover {
-      transform: scale(1.1); }
+  align-items: left;
+}
+.password-prompt > input {
+  background-color: #200000;
+  border: 2px solid #b6042a;
+  border-bottom-left-radius: 25px 115px;
+  border-bottom-right-radius: 15px 125px;
+  border-top-left-radius: 125px 25px;
+  border-top-right-radius: 15px 155px;
+  width: 128px;
+  height: 24px;
+}
+.password-prompt > button {
+  margin: 0 5px;
+  background-color: #b6042a;
+  border: 2px solid #b6042a;
+  border-bottom-left-radius: 25px 115px;
+  border-bottom-right-radius: 15px 125px;
+  border-top-left-radius: 125px 25px;
+  border-top-right-radius: 15px 155px;
+  width: 30px;
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+.password-prompt > button:hover {
+  transform: scale(1.1);
+}
+
+.webbrowser {
+  background-color: #ffffff;
+  height: 100%;
+  padding: 5px 0px 15px 15px;
+}
+
+.link-name {
+  color: #0000ff;
+}
+.link-desc {
+  color: #000000;
+}
 
 * {
   margin: 0;
-  color: #fff; }
+  color: #fff;
+}
+
+/*# sourceMappingURL=global.css.map */

@@ -15,6 +15,7 @@ import Forum from './content/forum.astro';
 import Library from './content/library.astro';
 import SecureDrop from './content/securedrop.astro';
 import DayToday from './content/daytoday.astro';
+import Cia from './content/cia.astro';
 ---
 
 <Main>
@@ -54,6 +55,10 @@ import DayToday from './content/daytoday.astro';
         <Window name="0day.today" id="daytoday">
             <DayToday></DayToday>
         </Window>
+
+        <Window name="CIA" id="cia">
+            <Cia></Cia>
+        </Window>
     </Desktop>
 
     <Taskbar>
@@ -66,27 +71,40 @@ import DayToday from './content/daytoday.astro';
         <Tab name="Open Library" id="library" img="./webbrowser.svg"/>
         <Tab name="SecureDrop" id="securedrop" img="./webbrowser.svg"/>
         <Tab name="0day.today" id="daytoday" img="./webbrowser.svg"/>
+        <Tab name="CIA" id="cia" img="./webbrowser.svg"/>
     </Taskbar>
 </Main>
 
 <script>
-    // Hide all windows
-    const windows = document.querySelectorAll<HTMLElement>(".window");
-    if(windows) {
-        windows.forEach(element => {
-            element.style.opacity = "0";
-            element.style.pointerEvents = "none";
-        });
+    function hide_tabs() {
+        const tabs = document.querySelectorAll<HTMLElement>(".taskbar-tab");
+        if(tabs) {
+            tabs.forEach(element => {
+                element.style.opacity = "0";
+                element.style.pointerEvents = "none";
+                element.style.position = "absolute";
+            });
+        }
     }
 
-    // Hide all tabs
-    const tabs = document.querySelectorAll<HTMLElement>(".taskbar-tab");
-    if(tabs) {
-        tabs.forEach(element => {
-            element.style.opacity = "0";
-            element.style.pointerEvents = "none";
-            element.style.position = "absolute";
-        });
+    function hide_windows() {
+        const windows = document.querySelectorAll<HTMLElement>(".window");
+        if(windows) {
+            windows.forEach(element => {
+                element.style.opacity = "0";
+                element.style.pointerEvents = "none";
+            });
+        }
+
+        // Hide all tabs
+        const tabs = document.querySelectorAll<HTMLElement>(".taskbar-tab");
+        if(tabs) {
+            tabs.forEach(element => {
+                element.style.opacity = "0";
+                element.style.pointerEvents = "none";
+                element.style.position = "absolute";
+            });
+        }
     }
 
     // Drag and drop window
@@ -101,7 +119,6 @@ import DayToday from './content/daytoday.astro';
             element.addEventListener("mouseup", stop_drag as EventListener);
         });
     }
-
     function start_drag(e: MouseEvent) {
         current_window = (e.target as HTMLElement).parentNode as HTMLElement;
         if(current_window) {
@@ -114,18 +131,18 @@ import DayToday from './content/daytoday.astro';
         window.addEventListener("mousemove", drag, true);
     }
 
-    function stop_drag() {
-        window.removeEventListener("mousemove", drag, true);
-        current_window = null;
-    }
-
     function drag(e: MouseEvent) {
         if(current_window) {
             current_window.style.top = `${e.clientY - pos_y}px`;
             current_window.style.left = `${e.clientX - pos_x}px`;
         }
     }
-    
+
+    function stop_drag() {
+        window.removeEventListener("mousemove", drag, true);
+        current_window = null;
+    }
+
     let z_index_max = 1;
     function apply_z_index(z: number, win: HTMLElement) {
         if(z <= z_index_max) {
@@ -134,4 +151,7 @@ import DayToday from './content/daytoday.astro';
             z_index_max = x;
         }
     }
+
+    hide_windows();
+    hide_tabs();
 </script>

@@ -8,26 +8,21 @@ const { id, name, desc } = Astro.props;
     <slot/>
 </div>
 
-<style>
-    .link-name {
-        color: #0000ff;
-    }
-    .link-desc {
-        color: #000000;
-    }
-</style>
+<script is:inline define:vars={{ id }}>
+    document.getElementById(`${id}-link`).addEventListener("click", open_window);
 
-<script define:vars={{ id }}>
-    document.getElementById(`${id}-link`).addEventListener("click", open);
-
-    function open() {
+    function open_window() {
         let app = document.getElementById(id);
-        app.style.opacity = "1";
-        app.style.pointerEvents = "all";
+        if(app) {
+            app.style.opacity = "1";
+            app.style.pointerEvents = "all";
+        }
 
         let tab = document.getElementById(`${id}-tab`);
-        tab.style.opacity = "1";
-        tab.style.pointerEvents = "all";
-        tab.style.position = "unset";
+        if(tab) {
+            tab.style.opacity = "1";
+            tab.style.pointerEvents = "all";
+            tab.style.position = "unset";
+        }
     }
 </script>
