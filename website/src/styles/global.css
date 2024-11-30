@@ -63,7 +63,7 @@
         transform: scale(1.05); }
 
 .desktop {
-  background-color: #000000;
+  background: url(/wallpaper.png) no-repeat center center/cover;
   width: 100vw;
   height: 100vh;
   display: flex;
