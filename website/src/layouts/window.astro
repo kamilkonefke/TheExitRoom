@@ -12,7 +12,7 @@ const { name, id } = Astro.props;
     </div>
 </div>
 
-<script is:inlinde define:vars={{ id }}>
+<script is:inline define:vars={{ id }}>
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
         let temp = document.getElementById(id);

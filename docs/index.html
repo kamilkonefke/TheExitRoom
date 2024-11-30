@@ -1,0 +1,14 @@
+<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="/src/styles/global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.13"><title>OS</title></head> <body>  <div class="desktop"> <div>  <div class="idc-i-just-want-to-center-a-div"> <div class="login-window">  <img src="./test.jpeg" class="user-icon"> <div> <p>User</p> <div class="password-prompt"> <input id="login" type="text"> <button id="login-btn">></button> </div> <script>(function(){const id = "login";
+const password = "ae";
+const destination = "main.html";
+
+    document.getElementById(`${id}-btn`).addEventListener("click", check_password);
+
+    function check_password() {
+        input = document.getElementById(id).value
+        console.log(input)
+        if( input == password ) {
+            window.location.href = destination;
+        }
+    }
+})();</script> </div>  </div> </div>  </div> </div>  </body></html>
