@@ -1,7 +1,6 @@
 .window {
     position: absolute;
-    background-color: $background;
-    pointer-events: none;
+    background-color: $web-background;
     z-index: 2;
     top: 20vh;
     left: 30vw;
@@ -10,7 +9,6 @@
     border-bottom-left-radius: 15px 125px;
     border-bottom-right-radius: 155px 15px;
     border: 2px solid $accent;
-    animation: slideIn 1.0s ease-in-out;
     &-bar {
         padding: 0px 10px;
         user-select: none;
@@ -19,5 +17,17 @@
         cursor: move;
         display: flex;
         align-items: center;
+        &-close {
+            background-color: #330000;
+            padding: 2px 8px;
+            border-top-left-radius: 15px 125px;
+            border-top-right-radius: 155px 15px;
+            border-bottom-left-radius: 15px 125px;
+            border-bottom-right-radius: 155px 15px;
+            transition: transform 0.3s ease;
+            &:hover {
+                transform: scale(1.05);
+            }
+        }
     }
 }

@@ -1,5 +1,32 @@
 .webbrowser {
-  background-color: #ffffff;
-  height: 100%;
-  padding: 5px 0px 15px 15px;
+    color: $web-text;
+    height: 100%;
+    padding: 5px 0px 15px 15px;
+    margin: 0px 10px;
+    & > h1 {
+        color: $web-red;
+    }
+    & > h2 {
+        color: $web-orange;
+    }
+    & > h3 {
+        color: $web-yellow;
+    }
+    & > h4 {
+        color: $web-green;
+    }
+    & > h5 {
+        color: $web-blue;
+    }
+    & > h6 {
+        color: $web-purple;
+    }
+}
+.link {
+    &-name {
+        color: $web-link;
+    }
+    &-desc {
+        color: $web-text;
+    }
 }
