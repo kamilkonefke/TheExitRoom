@@ -129,25 +129,6 @@
             tab.style.position = "unset";
         }
     }
-})();</script>
-<div id="cia-link" style="cursor: pointer;"> <a class="link-name">CIA</a> <a class="link-desc">- CIA</a>  </div> <script>(function(){const id = "cia";
-
-    document.getElementById(`${id}-link`).addEventListener("click", open_window);
-
-    function open_window() {
-        let app = document.getElementById(id);
-        if(app) {
-            app.style.opacity = "1";
-            app.style.pointerEvents = "all";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "1";
-            tab.style.pointerEvents = "all";
-            tab.style.position = "unset";
-        }
-    }
 })();</script> </div>  </div> </div> <script>(function(){const id = "webbrowser";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
@@ -182,7 +163,42 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="logs"> <div class="window-bar"> <p class="window-bar-close" id="logs-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">System logs</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="logsmd">logs.md</h1> </div>  </div> </div> <script>(function(){const id = "logs";
+})();</script> <div class="window" id="logs"> <div class="window-bar"> <p class="window-bar-close" id="logs-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">System logs</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <p>[2024-11-29 14:32:10] <p class="error">ERROR</p>: Disk space running low on drive C:<br/>
+[2024-11-28 08:15:45] <p class="warning">WARNING</p>: CPU temperature exceeds threshold<br/>
+[2024-11-27 19:45:23] <p class="info">INFO</p>: System update completed successfully<br/>
+[2024-11-26 11:03:54] <p class="error">ERROR</p>: User authentication failed for user ‘jdoe’<br/>
+[2024-11-25 17:12:33] <p class="info">INFO</p>: Backup operation started at 17:10:00<br/>
+[2024-11-24 22:45:11] <p class="warning">WARNING</p>: Network latency detected, affecting performance<br/>
+[2024-11-23 09:23:07] <p class="info">INFO</p>: Application log cleared by admin<br/>
+[2024-11-22 16:18:42] <p class="error">ERROR</p>: Unexpected shutdown detected at 16:15:00<br/>
+[2024-11-21 13:04:28] <p class="warning">WARNING</p>: Database connection timeout occurred<br/>
+[2024-11-20 10:20:50] <p class="info">INFO</p>: Network connection restored at 10:18:00<br/>
+[2024-11-30 09:45:12] <p class="info">INFO</p>: User ‘admin’ logged in successfully<br/>
+[2024-11-30 10:15:47] <p class="warning">WARNING</p>: High memory usage detected: 90%<br/>
+[2024-11-30 11:30:00] <p class="error">ERROR</p>: Failed to save configuration changes<br/>
+[2024-11-30 12:05:34] <p class="info">INFO</p>: Scheduled maintenance started<br/>
+[2024-11-30 12:55:45] <p class="info">INFO</p>: Maintenance completed without issues<br/>
+[2024-11-30 13:12:22] <p class="error">ERROR</p>: Service ‘Database’ failed to restart<br/>
+[2024-11-30 13:45:10] <p class="warning">WARNING</p>: Disk I/O performance degradation detected<br/>
+[2024-11-30 14:25:59] <p class="info">INFO</p>: New user ‘jdoe’ created successfully<br/>
+[2024-11-30 15:10:10] <p class="info">INFO</p>: Email notification service activated<br/>
+[2024-11-30 15:55:44] <p class="error">ERROR</p>: Unexpected power loss detected<br/>
+[2024-11-30 16:12:30] <p class="info">INFO</p>: Network speed test completed: 500 Mbps<br/>
+[2024-11-30 16:45:10] <p class="warning">WARNING</p>: Low virtual memory detected<br/>
+[2024-11-30 17:00:22] <p class="error">ERROR</p>: Failed to apply security patch<br/>
+[2024-11-30 17:30:00] <p class="info">INFO</p>: User session timed out for user ‘admin’<br/>
+[2024-11-30 17:45:50] <p class="info">INFO</p>: System diagnostics completed without critical issues<br/>
+[2024-11-30 18:15:37] <p class="error">ERROR</p>: Printer connection lost<br/>
+[2024-11-30 18:45:12] <p class="warning">WARNING</p>: High GPU temperature detected: 85°C<br/>
+[2024-11-30 19:10:45] <p class="info">INFO</p>: New software version 1.2.0 installed<br/>
+[2024-11-30 19:45:30] <p class="error">ERROR</p>: Backup operation failed<br/>
+[2024-11-30 20:15:22] <p class="info">INFO</p>: Scheduled task ‘cleanup’ completed successfully<br/>
+[2024-11-30 20:45:11] <p class="info">INFO</p>: New API token generated for service integration<br/>
+[2024-11-30 21:12:50] <p class="warning">WARNING</p>: Unusual login attempt detected from IP 192.168.1.10<br/>
+[2024-11-30 21:30:45] <p class="info">INFO</p>: Remote desktop session established with host ‘workstation-01’<br/>
+[2024-11-30 22:00:12] <p class="error">ERROR</p>: Application ‘TaskManager’ crashed unexpectedly<br/>
+[2024-11-30 22:30:33] <p class="warning">WARNING</p>: SSL certificate nearing expiration<br/>
+[2024-11-30 23:00:10] <p class="info">INFO</p>: Scheduled log rotation completed<br/></p> </div>  </div> </div> <script>(function(){const id = "logs";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -199,7 +215,8 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="forum"> <div class="window-bar"> <p class="window-bar-close" id="forum-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Cebulka</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="forummd">forum.md</h1> </div>  </div> </div> <script>(function(){const id = "forum";
+})();</script> <div class="window" id="forum"> <div class="window-bar"> <p class="window-bar-close" id="forum-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Cebulka</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="cebulka">Cebulka</h1>
+<hr/> </div>  </div> </div> <script>(function(){const id = "forum";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -267,7 +284,8 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="daytoday"> <div class="window-bar"> <p class="window-bar-close" id="daytoday-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">0day.today</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="daytodaymd">daytoday.md</h1> </div>  </div> </div> <script>(function(){const id = "daytoday";
+})();</script> <div class="window" id="daytoday"> <div class="window-bar"> <p class="window-bar-close" id="daytoday-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">0day.today</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="0daytoday">0day.today</h1>
+<hr/> </div>  </div> </div> <script>(function(){const id = "daytoday";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -284,21 +302,4 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="cia"> <div class="window-bar"> <p class="window-bar-close" id="cia-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">CIA</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="ciamd">cia.md</h1> </div>  </div> </div> <script>(function(){const id = "cia";
-
-    document.getElementById(`${id}-close`).addEventListener("click", close_window);
-    function close_window() {
-        let temp = document.getElementById(id);
-        if(temp) {
-            temp.style.opacity = "0";
-            temp.style.pointerEvents = "none";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "0";
-            tab.style.pointerEvents = "none";
-            tab.style.position = "absolute";
-        }
-    }
-})();</script>  </div> </div> <div class="taskbar"> <div style="display: flex;"> <!-- NIE RUSZAĆ BO DZIAŁA -->  <div class="taskbar-tab" id="webbrowser-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Web Browser</p> </div> <div class="taskbar-tab" id="archives-tab"> <img src="./archives.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Archives</p> </div> <div class="taskbar-tab" id="logs-tab"> <img src="./logs.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">System logs</p> </div> <div class="taskbar-tab" id="forum-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Cebulka</p> </div> <div class="taskbar-tab" id="fish-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Atlas Ryb</p> </div> <div class="taskbar-tab" id="library-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Open Library</p> </div> <div class="taskbar-tab" id="securedrop-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">SecureDrop</p> </div> <div class="taskbar-tab" id="daytoday-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">0day.today</p> </div> <div class="taskbar-tab" id="cia-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">CIA</p> </div>  </div> </div>  </body></html> 
+})();</script>  </div> </div> <div class="taskbar"> <div style="display: flex;"> <!-- NIE RUSZAĆ BO DZIAŁA -->  <div class="taskbar-tab" id="webbrowser-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Web Browser</p> </div> <div class="taskbar-tab" id="archives-tab"> <img src="./archives.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Archives</p> </div> <div class="taskbar-tab" id="logs-tab"> <img src="./logs.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">System logs</p> </div> <div class="taskbar-tab" id="forum-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Cebulka</p> </div> <div class="taskbar-tab" id="fish-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Atlas Ryb</p> </div> <div class="taskbar-tab" id="library-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Open Library</p> </div> <div class="taskbar-tab" id="securedrop-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">SecureDrop</p> </div> <div class="taskbar-tab" id="daytoday-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">0day.today</p> </div>  </div> </div>  </body></html> 

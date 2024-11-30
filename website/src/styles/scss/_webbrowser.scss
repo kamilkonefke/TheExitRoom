@@ -1,7 +1,7 @@
 .webbrowser {
     color: $web-text;
     height: 100%;
-    padding: 5px 0px 15px 15px;
+    padding: 2px;
     margin: 0px 10px;
     & > h1 {
         color: $web-red;
@@ -21,6 +21,9 @@
     & > h6 {
         color: $web-purple;
     }
+    & > p {
+        color: $web-text;
+    }
 }
 .link {
     &-name {
@@ -29,4 +32,13 @@
     &-desc {
         color: $web-text;
     }
+}
+.error {
+    color: $web-red;
+}
+.warning {
+    color: $web-yellow;
+}
+.info {
+    color: $web-green;
 }

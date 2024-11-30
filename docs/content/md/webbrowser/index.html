@@ -75,22 +75,3 @@
         }
     }
 })();</script>
-<div id="cia-link" style="cursor: pointer;"> <a class="link-name">CIA</a> <a class="link-desc">- CIA</a>  </div> <script>(function(){const id = "cia";
-
-    document.getElementById(`${id}-link`).addEventListener("click", open_window);
-
-    function open_window() {
-        let app = document.getElementById(id);
-        if(app) {
-            app.style.opacity = "1";
-            app.style.pointerEvents = "all";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "1";
-            tab.style.pointerEvents = "all";
-            tab.style.position = "unset";
-        }
-    }
-})();</script>
