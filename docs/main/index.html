@@ -1,5 +1,4 @@
-<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="/src/styles/global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.13"><title>OS</title><style>h1[data-astro-cid-ab55iqd7]{color:#000}
-</style><script type="module">function a(){const t=document.querySelectorAll(".taskbar-tab");t&&t.forEach(e=>{e.style.opacity="0",e.style.pointerEvents="none",e.style.position="absolute"})}function d(){const t=document.querySelectorAll(".window");t&&t.forEach(n=>{n.style.opacity="0",n.style.pointerEvents="none"});const e=document.querySelectorAll(".taskbar-tab");e&&e.forEach(n=>{n.style.opacity="0",n.style.pointerEvents="none",n.style.position="absolute"})}let l,r,o=null;const s=document.querySelectorAll(".window-bar");s&&s.forEach(t=>{t.addEventListener("mousedown",u),t.addEventListener("mouseup",y)});function u(t){if(o=t.target.parentNode,o){const e=o.getBoundingClientRect();r=t.clientY-e.top,l=t.clientX-e.left,f(+o.style.zIndex,o)}window.addEventListener("mousemove",c,!0)}function c(t){o&&(o.style.top=`${t.clientY-r}px`,o.style.left=`${t.clientX-l}px`)}function y(){window.removeEventListener("mousemove",c,!0),o=null}let i=1;function f(t,e){if(t<=i){let n=i+1;e.style.zIndex=n.toString(),i=n}}d();a();
+<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="/src/styles/global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.13"><title>OS</title><script type="module">function a(){const t=document.querySelectorAll(".taskbar-tab");t&&t.forEach(e=>{e.style.opacity="0",e.style.pointerEvents="none",e.style.position="absolute"})}function d(){const t=document.querySelectorAll(".window");t&&t.forEach(n=>{n.style.opacity="0",n.style.pointerEvents="none"});const e=document.querySelectorAll(".taskbar-tab");e&&e.forEach(n=>{n.style.opacity="0",n.style.pointerEvents="none",n.style.position="absolute"})}let l,r,o=null;const s=document.querySelectorAll(".window-bar");s&&s.forEach(t=>{t.addEventListener("mousedown",u),t.addEventListener("mouseup",y)});function u(t){if(o=t.target.parentNode,o){const e=o.getBoundingClientRect();r=t.clientY-e.top,l=t.clientX-e.left,f(+o.style.zIndex,o)}window.addEventListener("mousemove",c,!0)}function c(t){o&&(o.style.top=`${t.clientY-r}px`,o.style.left=`${t.clientX-l}px`)}function y(){window.removeEventListener("mousemove",c,!0),o=null}let i=1;function f(t,e){if(t<=i){let n=i+1;e.style.zIndex=n.toString(),i=n}}d();a();
 </script></head> <body>  <div class="desktop"> <div>  <div class="desktop-shortcut" id="webbrowser-btn"> <img src="./webbrowser.svg" class="desktop-shortcut-img"> <p class="desktop-shortcut-text">Web Browser</p> </div> <script>(function(){const id = "webbrowser";
 
     document.getElementById(`${id}-btn`).addEventListener("click", open_window);
@@ -54,7 +53,7 @@
             tab.style.position = "unset";
         }
     }
-})();</script> <div class="window" id="webbrowser"> <div class="window-bar"> <p class="window-bar-close" id="webbrowser-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Web Browser</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser" data-astro-cid-ab55iqd7> <h1 data-astro-cid-ab55iqd7>The Hidden wiki</h1> <div id="forum-link" style="cursor: pointer;"> <a class="link-name">Cebulka</a> <a class="link-desc">- Najwieksze polskie forum w darkwebie</a>  </div> <script>(function(){const id = "forum";
+})();</script> <div class="window" id="webbrowser"> <div class="window-bar"> <p class="window-bar-close" id="webbrowser-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Web Browser</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1>The Hidden wiki</h1> <div id="forum-link" style="cursor: pointer;"> <a class="link-name">Cebulka</a> <a class="link-desc">- Najwieksze polskie forum w darkwebie</a>  </div> <script>(function(){const id = "forum";
 
     document.getElementById(`${id}-link`).addEventListener("click", open_window);
 
@@ -144,7 +143,7 @@
             tab.style.position = "unset";
         }
     }
-})();</script> </div>   </div> </div> <script>(function(){const id = "webbrowser";
+})();</script> </div>  </div> </div> <script>(function(){const id = "webbrowser";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -161,7 +160,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="archives"> <div class="window-bar"> <p class="window-bar-close" id="archives-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Archives</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>Archives</h1> </div>  </div> </div> <script>(function(){const id = "archives";
+})();</script> <div class="window" id="archives"> <div class="window-bar"> <p class="window-bar-close" id="archives-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Archives</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "archives";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -178,7 +177,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="logs"> <div class="window-bar"> <p class="window-bar-close" id="logs-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">System logs</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>Logs</h1> </div>  </div> </div> <script>(function(){const id = "logs";
+})();</script> <div class="window" id="logs"> <div class="window-bar"> <p class="window-bar-close" id="logs-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">System logs</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "logs";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -195,7 +194,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="forum"> <div class="window-bar"> <p class="window-bar-close" id="forum-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Cebulka</p> </div> <div style="overflow-y: scroll; height: 420px;">  <h1>Cebulka</h1>  </div> </div> <script>(function(){const id = "forum";
+})();</script> <div class="window" id="forum"> <div class="window-bar"> <p class="window-bar-close" id="forum-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Cebulka</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "forum";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -212,7 +211,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="fish"> <div class="window-bar"> <p class="window-bar-close" id="fish-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Atlas ryb</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>Atlas ryb</h1> </div>  </div> </div> <script>(function(){const id = "fish";
+})();</script> <div class="window" id="fish"> <div class="window-bar"> <p class="window-bar-close" id="fish-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Atlas ryb</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "fish";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -229,7 +228,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="library"> <div class="window-bar"> <p class="window-bar-close" id="library-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Libary</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>Library Genesis</h1> </div>  </div> </div> <script>(function(){const id = "library";
+})();</script> <div class="window" id="library"> <div class="window-bar"> <p class="window-bar-close" id="library-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Libary</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "library";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -246,7 +245,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="securedrop"> <div class="window-bar"> <p class="window-bar-close" id="securedrop-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Secure Drop</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>SecureDrop</h1> </div>  </div> </div> <script>(function(){const id = "securedrop";
+})();</script> <div class="window" id="securedrop"> <div class="window-bar"> <p class="window-bar-close" id="securedrop-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Secure Drop</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "securedrop";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -263,7 +262,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="daytoday"> <div class="window-bar"> <p class="window-bar-close" id="daytoday-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">0day.today</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>0day.today</h1> </div>  </div> </div> <script>(function(){const id = "daytoday";
+})();</script> <div class="window" id="daytoday"> <div class="window-bar"> <p class="window-bar-close" id="daytoday-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">0day.today</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "daytoday";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -280,7 +279,7 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="cia"> <div class="window-bar"> <p class="window-bar-close" id="cia-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">CIA</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div> <h1>CIA</h1> </div>  </div> </div> <script>(function(){const id = "cia";
+})();</script> <div class="window" id="cia"> <div class="window-bar"> <p class="window-bar-close" id="cia-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">CIA</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div>  </div>  </div> </div> <script>(function(){const id = "cia";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
