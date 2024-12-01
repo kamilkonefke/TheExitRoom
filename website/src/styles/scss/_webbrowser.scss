@@ -3,42 +3,51 @@
     height: 100%;
     padding: 2px;
     margin: 0px 10px;
+    text-align: left;
     & > h1 {
         color: $web-red;
+        text-align: center;
     }
     & > h2 {
         color: $web-orange;
+        text-align: center;
     }
     & > h3 {
         color: $web-yellow;
+        text-align: center;
     }
     & > h4 {
         color: $web-green;
+        text-align: center;
     }
     & > h5 {
         color: $web-blue;
+        text-align: center;
     }
     & > h6 {
         color: $web-purple;
+        text-align: center;
     }
     & > p {
         color: $web-text;
+        display: inline;
+    }
+    & > .error {
+        color: $web-red;
+    }
+    & > .warning {
+        color: $web-yellow;
+    }
+    & > .info {
+        color: $web-green;
     }
 }
 .link {
     &-name {
         color: $web-link;
+        font-weight: bold;
     }
     &-desc {
         color: $web-text;
     }
-}
-.error {
-    color: $web-red;
-}
-.warning {
-    color: $web-yellow;
-}
-.info {
-    color: $web-green;
 }

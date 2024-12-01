@@ -1,5 +1,50 @@
+* {
+  margin: 0; }
+
+.webbrowser {
+  color: #4c4f69;
+  height: 100%;
+  padding: 2px;
+  margin: 0px 10px;
+  text-align: left; }
+  .webbrowser > h1 {
+    color: #d20f39;
+    text-align: center; }
+  .webbrowser > h2 {
+    color: #fe640b;
+    text-align: center; }
+  .webbrowser > h3 {
+    color: #df8e1d;
+    text-align: center; }
+  .webbrowser > h4 {
+    color: #40a02b;
+    text-align: center; }
+  .webbrowser > h5 {
+    color: #1e66f5;
+    text-align: center; }
+  .webbrowser > h6 {
+    color: #8839ef;
+    text-align: center; }
+  .webbrowser > p {
+    color: #4c4f69;
+    display: inline; }
+  .webbrowser > .error {
+    color: #d20f39; }
+  .webbrowser > .warning {
+    color: #df8e1d; }
+  .webbrowser > .info {
+    color: #40a02b; }
+
+.link-name {
+  color: #1e66f5;
+  font-weight: bold; }
+
+.link-desc {
+  color: #4c4f69; }
+
 .taskbar {
   z-index: 1;
+  color: #ffffff;
   background-color: #000000;
   bottom: 0;
   display: flex;
@@ -46,6 +91,7 @@
   .window-bar {
     padding: 0px 10px;
     user-select: none;
+    color: #ffffff;
     background-color: #b6042a;
     height: 32px;
     cursor: move;
@@ -64,6 +110,7 @@
 
 .desktop {
   background: url(/wallpaper.png) no-repeat center center/cover;
+  color: #ffffff;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -156,42 +203,3 @@
 .disclaimer {
   color: #ff0000;
   text-align: center; }
-
-.webbrowser {
-  color: #4c4f69;
-  height: 100%;
-  padding: 2px;
-  margin: 0px 10px; }
-  .webbrowser > h1 {
-    color: #d20f39; }
-  .webbrowser > h2 {
-    color: #fe640b; }
-  .webbrowser > h3 {
-    color: #df8e1d; }
-  .webbrowser > h4 {
-    color: #40a02b; }
-  .webbrowser > h5 {
-    color: #1e66f5; }
-  .webbrowser > h6 {
-    color: #8839ef; }
-  .webbrowser > p {
-    color: #4c4f69; }
-
-.link-name {
-  color: #1e66f5; }
-
-.link-desc {
-  color: #4c4f69; }
-
-.error {
-  color: #d20f39; }
-
-.warning {
-  color: #df8e1d; }
-
-.info {
-  color: #40a02b; }
-
-* {
-  margin: 0;
-  color: #ffffff; }

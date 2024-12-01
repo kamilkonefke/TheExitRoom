@@ -1,13 +1,12 @@
 @import "colors.scss";
+@import "webbrowser.scss";
 @import "taskbar.scss";
 @import "window.scss";
 @import "desktop.scss";
 @import "animations.scss";
 @import "login.scss";
-@import "webbrowser.scss";
 
 * {
     margin: 0;
-    color: $text;
 }
 
