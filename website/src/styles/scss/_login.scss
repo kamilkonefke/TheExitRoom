@@ -39,6 +39,7 @@
     & > input {
         background-color: $bg1;
 
+        color: $text;
         border: 2px solid $accent;
         border-bottom-left-radius: 25px 115px;
         border-bottom-right-radius: 15px 125px;
@@ -57,6 +58,7 @@
         border-bottom-right-radius: 15px 125px;
         border-top-left-radius: 125px 25px;
         border-top-right-radius: 15px 155px;
+        color: $text;
 
         width: 30px;
         height: 30px;
@@ -67,6 +69,6 @@
     }
 }
 .disclaimer {
-  color: #ff0000;
-  text-align: center;
+    color: $accent;
+    text-align: center;
 }

@@ -1,38 +1,35 @@
-* {
-  margin: 0; }
-
-.webbrowser {
+.webbrowser, #shark-div, #forum-div {
   color: #4c4f69;
   height: 100%;
   padding: 2px;
   margin: 0px 10px;
   text-align: left; }
-  .webbrowser > h1 {
+  .webbrowser > h1, #shark-div > h1, #forum-div > h1 {
     color: #d20f39;
     text-align: center; }
-  .webbrowser > h2 {
+  .webbrowser > h2, #shark-div > h2, #forum-div > h2 {
     color: #fe640b;
     text-align: center; }
-  .webbrowser > h3 {
+  .webbrowser > h3, #shark-div > h3, #forum-div > h3 {
     color: #df8e1d;
     text-align: center; }
-  .webbrowser > h4 {
+  .webbrowser > h4, #shark-div > h4, #forum-div > h4 {
     color: #40a02b;
     text-align: center; }
-  .webbrowser > h5 {
+  .webbrowser > h5, #shark-div > h5, #forum-div > h5 {
     color: #1e66f5;
     text-align: center; }
-  .webbrowser > h6 {
+  .webbrowser > h6, #shark-div > h6, #forum-div > h6 {
     color: #8839ef;
     text-align: center; }
-  .webbrowser > p {
+  .webbrowser > p, #shark-div > p, #forum-div > p {
     color: #4c4f69;
     display: inline; }
-  .webbrowser > .error {
+  .webbrowser > .error, #shark-div > .error, #forum-div > .error {
     color: #d20f39; }
-  .webbrowser > .warning {
+  .webbrowser > .warning, #shark-div > .warning, #forum-div > .warning {
     color: #df8e1d; }
-  .webbrowser > .info {
+  .webbrowser > .info, #shark-div > .info, #forum-div > .info {
     color: #40a02b; }
 
 .link-name {
@@ -41,6 +38,24 @@
 
 .link-desc {
   color: #4c4f69; }
+
+.web-prompt {
+  display: inline; }
+  .web-prompt > p {
+    display: inline;
+    background-color: #ccd0da;
+    padding: 0px 5px;
+    border-radius: 2px; }
+  .web-prompt > input {
+    background-color: #ccd0da;
+    padding: 4px 2px;
+    border-radius: 2px;
+    border: none; }
+  .web-prompt > button {
+    background-color: #ccd0da;
+    padding: 4px 10px;
+    border-radius: 2px;
+    border: none; }
 
 .taskbar {
   z-index: 1;
@@ -179,6 +194,7 @@
   align-items: left; }
   .password-prompt > input {
     background-color: #200000;
+    color: #ffffff;
     border: 2px solid #b6042a;
     border-bottom-left-radius: 25px 115px;
     border-bottom-right-radius: 15px 125px;
@@ -194,6 +210,7 @@
     border-bottom-right-radius: 15px 125px;
     border-top-left-radius: 125px 25px;
     border-top-right-radius: 15px 155px;
+    color: #ffffff;
     width: 30px;
     height: 30px;
     transition: transform 0.3s ease; }
@@ -201,5 +218,8 @@
       transform: scale(1.1); }
 
 .disclaimer {
-  color: #ff0000;
+  color: #b6042a;
   text-align: center; }
+
+* {
+  margin: 0; }

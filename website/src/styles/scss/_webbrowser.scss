@@ -1,4 +1,4 @@
-.webbrowser {
+.webbrowser, #shark-div, #forum-div {
     color: $web-text;
     height: 100%;
     padding: 2px;
@@ -49,5 +49,26 @@
     }
     &-desc {
         color: $web-text;
+    }
+}
+.web-prompt {
+    display: inline;
+    & > p {
+        display: inline;
+        background-color: $web-bg1;
+        padding: 0px 5px;
+        border-radius: 2px;
+    }
+    & > input {
+        background-color: $web-bg1;
+        padding: 4px 2px;
+        border-radius: 2px;
+        border: none;
+    }
+    & > button {
+        background-color: $web-bg1;
+        padding: 4px 10px;
+        border-radius: 2px;
+        border: none;
     }
 }
