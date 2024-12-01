@@ -1,6 +1,7 @@
 ---
 const { id, password, destination } = Astro.props;
 ---
+
 <div class="password-prompt">
     <input id={id} type="text"/>
     <button id={`${id}-btn`}>></button>
@@ -11,7 +12,6 @@ const { id, password, destination } = Astro.props;
 
     function check_password() {
         input = document.getElementById(id).value
-        console.log(input)
         if( input == password ) {
             window.location.href = destination;
         }

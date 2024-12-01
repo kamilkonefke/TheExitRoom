@@ -5,6 +5,7 @@ import Taskbar from '../layouts/taskbar.astro';
 import Window from '../layouts/window.astro';
 import Shortcut from '../components/desktop_shortcut.astro';
 import Tab from '../components/taskbar_tab.astro';
+import Login from '../components/pasword_prompt.astro';
 
 import WebBrowser from './content/webbrowser.astro';
 import Archives from './content/archives.astro';
@@ -16,6 +17,7 @@ import Forum from './content/forum.astro';
 import Library from './content/library.astro';
 import SecureDrop from './content/securedrop.astro';
 import DayToday from './content/daytoday.astro';
+import Buttonme from './content/buttonme.astro';
 ---
 
 <Main>
@@ -60,6 +62,9 @@ import DayToday from './content/daytoday.astro';
             <DayToday></DayToday>
         </Window>
 
+        <Window name="Button.me" id="buttonme">
+            <Buttonme></Buttonme>
+        </Window>
     </Desktop>
 
     <Taskbar>
@@ -72,10 +77,20 @@ import DayToday from './content/daytoday.astro';
         <Tab name="Open Library" id="library" img="./webbrowser.svg"/>
         <Tab name="SecureDrop" id="securedrop" img="./webbrowser.svg"/>
         <Tab name="0day.today" id="daytoday" img="./webbrowser.svg"/>
+        <Tab name="Button.me" id="buttonme" img="./webbrowser.svg"/>
     </Taskbar>
 </Main>
 
 <script>
+    function hide_shortcuts() {
+        const archives = document.getElementById("archives-btn");
+        if(archives) {
+            archives.style.opacity = "0";
+            archives.style.pointerEvents = "none";
+            archives.style.position = "absolute";
+        }
+    }
+
     function hide_tabs() {
         const tabs = document.querySelectorAll<HTMLElement>(".taskbar-tab");
         if(tabs) {
@@ -154,4 +169,5 @@ import DayToday from './content/daytoday.astro';
 
     hide_windows();
     hide_tabs();
+    hide_shortcuts();
 </script>

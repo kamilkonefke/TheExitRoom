@@ -12,6 +12,12 @@ const { id, name, desc } = Astro.props;
     document.getElementById(`${id}-link`).addEventListener("click", open_window);
 
     function open_window() {
+        let login = document.getElementById(id);
+        if(login) {
+            login.style.opacity = "1";
+            login.style.pointerEvents = "all";
+        }
+
         let app = document.getElementById(id);
         if(app) {
             app.style.opacity = "1";

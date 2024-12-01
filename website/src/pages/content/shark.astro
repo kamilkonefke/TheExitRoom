@@ -3,5 +3,40 @@ import Content from "./md/shark.mdx"
 ---
 
 <div class="webbrowser">
-    <Content></Content>
+    <div class="password-prompt">
+        <p>Hasło: </p>
+        <input id="login-shark" type="text"/>
+        <button id="login-shark-button">></button>
+    </div>
+    <div id="shark-div">
+        <Content></Content>
+    </div>
 </div>
+
+<script>
+    let e = document.getElementById("shark-div");
+    if(e) {
+        e.style.opacity = "0";
+    }
+
+    const passwd = "a";
+    document.getElementById("login-shark-button")?.addEventListener("click", check_password);
+    function check_password() {
+        let input = document.getElementById("login-shark");
+        if(input.value.toLowerCase() == passwd) {
+            if(e) {
+                e.style.opacity = "1";
+            }
+        }
+    }
+
+    let shark_btn = document.getElementById("shark-s")?.addEventListener("click", open_archives);
+    function open_archives() {
+        let shark_shortcut = document.getElementById("archives-btn");
+        if(shark_shortcut) {
+            shark_shortcut.style.pointerEvents = "all";
+            shark_shortcut.style.opacity = "1";
+            shark_shortcut.style.position = "unset";
+        }
+    }
+</script>

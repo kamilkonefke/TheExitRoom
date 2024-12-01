@@ -3,5 +3,30 @@ import Content from "./md/forum.mdx"
 ---
 
 <div class="webbrowser">
-    <Content></Content>
+    <div class="password-prompt">
+        <p>Hasło: </p>
+        <input id="login-forum" type="text"/>
+        <button id="login-forum-button">></button>
+    </div>
+    <div id="forum-div">
+        <Content></Content>
+    </div>
 </div>
+
+<script>
+    let e = document.getElementById("forum-div");
+    if(e) {
+        e.style.opacity = "0";
+    }
+
+    const passwd = "bulbul";
+    document.getElementById("login-forum-button")?.addEventListener("click", check_password);
+    function check_password() {
+        let input = document.getElementById("login-forum");
+        if(input.value.toLowerCase() == passwd) {
+            if(e) {
+                e.style.opacity = "1";
+            }
+        }
+    }
+</script>
