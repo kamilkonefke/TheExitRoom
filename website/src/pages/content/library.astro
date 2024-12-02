@@ -23,14 +23,16 @@ import Content from "./md/library.mdx"
     document.getElementById("login-library-button")?.addEventListener("click", check_lib_password);
     function check_lib_password() {
         console.log("ae")
-        let input = document.getElementById("login-library");
-        if(input.value.toLowerCase() == passwd) {
-            if(e) {
-                e.style.opacity = "1";
+        let input = document.getElementById("login-library") as HTMLInputElement;
+        if(input) {
+            if(input.value.toLowerCase() == passwd) {
+                if(e) {
+                    e.style.opacity = "1";
+                }
             }
         }
     }
-    let lib_button = document.getElementById("show-logs-button")?.addEventListener("click", open_logs);
+    document.getElementById("show-logs-button")?.addEventListener("click", open_logs);
     function open_logs() {
         let logs_shortcut = document.getElementById("logs-btn");
         if(logs_shortcut) {
@@ -39,6 +41,5 @@ import Content from "./md/library.mdx"
             logs_shortcut.style.position = "unset";
         }
     }
-
 </script>
 

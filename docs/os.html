@@ -1,23 +1,4 @@
-<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.16"><title>OS</title><script type="module">function a(){const t=document.querySelectorAll(".taskbar-tab");t&&t.forEach(e=>{e.style.opacity="0",e.style.pointerEvents="none",e.style.position="absolute"})}function d(){const t=document.querySelectorAll(".window");t&&t.forEach(n=>{n.style.opacity="0",n.style.pointerEvents="none"});const e=document.querySelectorAll(".taskbar-tab");e&&e.forEach(n=>{n.style.opacity="0",n.style.pointerEvents="none",n.style.position="absolute"})}let l,r,o=null;const s=document.querySelectorAll(".window-bar");s&&s.forEach(t=>{t.addEventListener("mousedown",u),t.addEventListener("mouseup",y)});function u(t){if(o=t.target.parentNode,o){const e=o.getBoundingClientRect();r=t.clientY-e.top,l=t.clientX-e.left,f(+o.style.zIndex,o)}window.addEventListener("mousemove",c,!0)}function c(t){o&&(o.style.top=`${t.clientY-r}px`,o.style.left=`${t.clientX-l}px`)}function y(){window.removeEventListener("mousemove",c,!0),o=null}let i=1;function f(t,e){if(t<=i){let n=i+1;e.style.zIndex=n.toString(),i=n}}d();a();
-</script></head> <body>  <div class="desktop"> <div>  <div class="desktop-shortcut" id="webbrowser-btn"> <img src="./webbrowser.svg" class="desktop-shortcut-img"> <p class="desktop-shortcut-text">Web Browser</p> </div> <script>(function(){const id = "webbrowser";
-
-    document.getElementById(`${id}-btn`).addEventListener("click", open_window);
-
-    function open_window() {
-        let app = document.getElementById(id);
-        if(app) {
-            app.style.opacity = "1";
-            app.style.pointerEvents = "all";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "1";
-            tab.style.pointerEvents = "all";
-            tab.style.position = "unset";
-        }
-    }
-})();</script> <div class="desktop-shortcut" id="archives-btn"> <img src="./archives.svg" class="desktop-shortcut-img"> <p class="desktop-shortcut-text">Archives</p> </div> <script>(function(){const id = "archives";
+<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.16"><title>OS</title><script type="module" src="/_astro/hoisted.B5MVnabw.js"></script></head> <body>  <div class="desktop"> <div>  <div class="desktop-shortcut" id="webbrowser-btn"> <img src="./webbrowser.svg" class="desktop-shortcut-img"> <p class="desktop-shortcut-text">Web Browser</p> </div> <script>(function(){const id = "webbrowser";
 
     document.getElementById(`${id}-btn`).addEventListener("click", open_window);
 
@@ -54,68 +35,19 @@
         }
     }
 })();</script> <div class="window" id="webbrowser"> <div class="window-bar"> <p class="window-bar-close" id="webbrowser-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Web Browser</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="the-hidden-wiki">The Hidden wiki</h1>
-<div id="forum-link" style="cursor: pointer;"> <a class="link-name">Cebulka</a> <a class="link-desc">- Najwieksze polskie forum w darkwebie</a>  </div> <script>(function(){const id = "forum";
-
-    document.getElementById(`${id}-link`).addEventListener("click", open_window);
-
-    function open_window() {
-        let app = document.getElementById(id);
-        if(app) {
-            app.style.opacity = "1";
-            app.style.pointerEvents = "all";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "1";
-            tab.style.pointerEvents = "all";
-            tab.style.position = "unset";
-        }
-    }
-})();</script>
-<div id="library-link" style="cursor: pointer;"> <a class="link-name">Library Genesis</a> <a class="link-desc">- Najwieksza biblioteka w sieci tor</a>  </div> <script>(function(){const id = "library";
-
-    document.getElementById(`${id}-link`).addEventListener("click", open_window);
-
-    function open_window() {
-        let app = document.getElementById(id);
-        if(app) {
-            app.style.opacity = "1";
-            app.style.pointerEvents = "all";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "1";
-            tab.style.pointerEvents = "all";
-            tab.style.position = "unset";
-        }
-    }
-})();</script>
-<div id="securedrop-link" style="cursor: pointer;"> <a class="link-name">SecureDrop</a> <a class="link-desc">- Anonimowe forum dla dziennikarzy</a>  </div> <script>(function(){const id = "securedrop";
-
-    document.getElementById(`${id}-link`).addEventListener("click", open_window);
-
-    function open_window() {
-        let app = document.getElementById(id);
-        if(app) {
-            app.style.opacity = "1";
-            app.style.pointerEvents = "all";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "1";
-            tab.style.pointerEvents = "all";
-            tab.style.position = "unset";
-        }
-    }
-})();</script>
+<hr/>
+<h2 id="poradniki">Poradniki</h2>
 <div id="daytoday-link" style="cursor: pointer;"> <a class="link-name">0day.today</a> <a class="link-desc">- Exploity i podatnosci</a>  </div> <script>(function(){const id = "daytoday";
 
     document.getElementById(`${id}-link`).addEventListener("click", open_window);
 
     function open_window() {
+        let login = document.getElementById(id);
+        if(login) {
+            login.style.opacity = "1";
+            login.style.pointerEvents = "all";
+        }
+
         let app = document.getElementById(id);
         if(app) {
             app.style.opacity = "1";
@@ -129,24 +61,87 @@
             tab.style.position = "unset";
         }
     }
-})();</script> </div>  </div> </div> <script>(function(){const id = "webbrowser";
+})();</script>
+<hr/>
+<h2 id="rybki">Rybki</h2>
+<div id="fish-link" style="cursor: pointer;"> <a class="link-name">Fishopedia</a> <a class="link-desc">- Ryby.</a>  </div> <script>(function(){const id = "fish";
 
-    document.getElementById(`${id}-close`).addEventListener("click", close_window);
-    function close_window() {
-        let temp = document.getElementById(id);
-        if(temp) {
-            temp.style.opacity = "0";
-            temp.style.pointerEvents = "none";
+    document.getElementById(`${id}-link`).addEventListener("click", open_window);
+
+    function open_window() {
+        let login = document.getElementById(id);
+        if(login) {
+            login.style.opacity = "1";
+            login.style.pointerEvents = "all";
+        }
+
+        let app = document.getElementById(id);
+        if(app) {
+            app.style.opacity = "1";
+            app.style.pointerEvents = "all";
         }
 
         let tab = document.getElementById(`${id}-tab`);
         if(tab) {
-            tab.style.opacity = "0";
-            tab.style.pointerEvents = "none";
-            tab.style.position = "absolute";
+            tab.style.opacity = "1";
+            tab.style.pointerEvents = "all";
+            tab.style.position = "unset";
         }
     }
-})();</script> <div class="window" id="archives"> <div class="window-bar"> <p class="window-bar-close" id="archives-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Archives</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="archivesmd">archives.md</h1> </div>  </div> </div> <script>(function(){const id = "archives";
+})();</script>
+<div id="forum-link" style="cursor: pointer;"> <a class="link-name">Cebulka.org</a> <a class="link-desc">- Najwieksze polskie forum w darkwebie</a>  </div> <script>(function(){const id = "forum";
+
+    document.getElementById(`${id}-link`).addEventListener("click", open_window);
+
+    function open_window() {
+        let login = document.getElementById(id);
+        if(login) {
+            login.style.opacity = "1";
+            login.style.pointerEvents = "all";
+        }
+
+        let app = document.getElementById(id);
+        if(app) {
+            app.style.opacity = "1";
+            app.style.pointerEvents = "all";
+        }
+
+        let tab = document.getElementById(`${id}-tab`);
+        if(tab) {
+            tab.style.opacity = "1";
+            tab.style.pointerEvents = "all";
+            tab.style.position = "unset";
+        }
+    }
+})();</script>
+<hr/>
+<h2 id="tor">TOR</h2>
+<div id="library-link" style="cursor: pointer;"> <a class="link-name">onionshare</a> <a class="link-desc">- Najwieszy serwer ftp w sieci tor</a>  </div> <script>(function(){const id = "library";
+
+    document.getElementById(`${id}-link`).addEventListener("click", open_window);
+
+    function open_window() {
+        let login = document.getElementById(id);
+        if(login) {
+            login.style.opacity = "1";
+            login.style.pointerEvents = "all";
+        }
+
+        let app = document.getElementById(id);
+        if(app) {
+            app.style.opacity = "1";
+            app.style.pointerEvents = "all";
+        }
+
+        let tab = document.getElementById(`${id}-tab`);
+        if(tab) {
+            tab.style.opacity = "1";
+            tab.style.pointerEvents = "all";
+            tab.style.position = "unset";
+        }
+    }
+})();</script>
+<hr/> </div>  </div> </div> <script>(function(){const id = "webbrowser";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -198,7 +193,8 @@
 [2024-11-30 21:30:45] <p class="info">INFO</p>: Remote desktop session established with host ‘workstation-01’<br/>
 [2024-11-30 22:00:12] <p class="error">ERROR</p>: Application ‘TaskManager’ crashed unexpectedly<br/>
 [2024-11-30 22:30:33] <p class="warning">WARNING</p>: SSL certificate nearing expiration<br/>
-[2024-11-30 23:00:10] <p class="info">INFO</p>: Scheduled log rotation completed<br/></p> </div>  </div> </div> <script>(function(){const id = "logs";
+[2024-11-30 23:00:10] <p class="info">INFO</p>: Scheduled log rotation completed<br/>
+[2024-11-30 23:30:32] <p class="error">ERROR</p>: Unexpected string: ‘cnlieV93c2themFfY2lfZHJvZ2U’</p> </div>  </div> </div> <script>(function(){const id = "logs";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -215,8 +211,116 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="forum"> <div class="window-bar"> <p class="window-bar-close" id="forum-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Cebulka</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="cebulka">Cebulka</h1>
-<hr/> </div>  </div> </div> <script>(function(){const id = "forum";
+})();</script> <div class="window" id="forum"> <div class="window-bar"> <p class="window-bar-close" id="forum-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Cebulka</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <div class="web-prompt">
+Użytkownik: <p>lowieNaSmiglo85</p> Hasło:
+<input id="login-forum" type="text"> <button id="login-forum-button">></button> </div> <div id="forum-div"> <h1 id="cebulka-rwędkarstwo">Cebulka r/wędkarstwo</h1>
+<p><p class="error">ERROR</p>: System zidentyfikował poważne niezgodności w danych! Proszę <del>nie</del> ignorować – <del>odśwież</del> stronę natychmiast, aby uniknąć nieodwracalnych błędów wizualnych i utraty dostępu! <br/>
+<p class="info">INFO</p>: Pomyślnie przesłano część pliku <code>/etc/shadow</code></p>
+<hr/>
+<h2 id="twoje-wątki">Twoje Wątki:</h2>
+<hr/>
+<h3 id="wątek-wyciek-ryb">Wątek: Wyciek ryb</h3>
+<h4 id="ulowienasmiglo85ty">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>xxxxx, znowu nic! Cały dzień nad wodą i zero ryb! Jak to możliwe, że wszyscy łowią, a ja nie? C<strong>H</strong>yba coś ze mną nie tak…<br/></p>
+<br/>
+<hr/>
+<h4 id="ukochamzlotylin123">u/<strong>kochamZlotyLin123</strong>:</h4>
+<p>Bo pewnie masz jakieś <strong>X</strong>xxxx przynęty, jak zawsze. Tylko patrzeć, jak w końcu wyciągniesz ten kij, który sam wiesz, że nie działa!<br/></p>
+<br/>
+<hr/>
+<h4 id="ulowienasmiglo85ty-1">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p><strong>O</strong>, ty to już się naprawdę nie zamykasz, co? Zawsze jesteś mądry, ale po dwóch godzinach wyjazdu i tak wracasz do domu z pustym wiaderkiem. Może w końcu przestań gadać i pokaż, jak się łowi!<br/></p>
+<br/>
+<hr/>
+<h4 id="uszczupak_krol_wod">u/<strong>szczupak_krol_wod</strong>:</h4>
+<p>Ty, spokój! Bo tak jak ty nic nie złapałeś, to ja <strong>M</strong>am teraz 5 karasi w torbie. Wy wszyscy tylko gadacie, ale jak przychodzi co do czego, to nie potraficie nic poza narzekaniem!<br/></p>
+<br/>
+<hr/>
+<h4 id="ukochamzlotylin123-1">u/<strong>kochamZlotyLin123</strong>:</h4>
+<p>Słuchaj, ja tu nie będę z nikim rozmawiał o rybach, bo to co wy wyprawiacie, to nie jest wędkarstwo! Przypomnę, że gdybym nie musiał rywalizować z takimi amatorami jak wy, to może ryby by były w mojej siatce!<br/></p>
+<br/>
+<hr/>
+<h4 id="ulowienasmiglo85ty-2">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>Jeżeli zaczynasz mówić o rywalizacji, to znaczy, że po prostu masz kompleksy. Zawsze wytykasz innym błędy, a wiesz, że jakbyś był tak dobry, to nie wracałbyś do domu z pustymi rękami!<br/></p>
+<br/>
+<hr/>
+<h4 id="uszczupak_krol_wod-1">u/<strong>szczupak_krol_wod</strong>:</h4>
+<p>Spokojnie, wszyscy jesteście tacy sami – jak się tra<strong>F</strong>i większa ryba, to zaczynacie się kłócić, kto ją złapał. A potem jeszcze opowiadacie wszystkim, że to wy złapaliście. Widziałem cię, jak ściągałeś plastikową torbę z haczyka, to tak nie wyglądało jak ryba!<br/></p>
+<br/>
+<hr/>
+<h4 id="ukochamzlotylin123-2">u/<strong>kochamZlotyLin123</strong>:</h4>
+<p>Ty to się nie zamykaj, <strong>B</strong>o z tego, co wiem, to wczoraj zamiast ryby wyciągnąłeś tylko kawałek starego buta z wody. A potem przychodziłeś do mnie i opowiadałeś, że to był ‘wielki okaz’.<br/></p>
+<br/>
+<hr/>
+<h4 id="ulowienasmiglo85ty-3">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>A ty znowu się czepiasz. O ile dobrze pamiętam, ty wczoraj miałeś wielkie plany, a skończyło się na kilku małych karasiach, które tak naprawdę złapałeś przy brzegu, na samym końcu!<br/></p>
+<br/>
+<hr/>
+<h4 id="uszczupak_krol_wod-2">u/<strong>szczupak_krol_wod</strong>:</h4>
+<p>O, to ty już kończysz?! Nie wiem, kto tu jest gorszy – ty z tą twoją ‘wielką’ rybą, czy ty, który owszem, potrafisz złapać coś, ale potem tylko siedzisz nad wodą i narzekasz, że za małe!<br/></p>
+<br/>
+<hr/>
+<h4 id="ukochamzlotylin123-3">u/<strong>kochamZlotyLin123</strong>:</h4>
+<p>Ty nie jesteś w stanie zrozumieć, że czasami ryby po prostu nie biorą. A wy tu wszyscy się rozkręcacie, jakbyście byli ekspertami w łowieniu. Kiedy ostatnio naprawdę złapałeś coś większego, geniuszu?<br/></p>
+<br/>
+<hr/>
+<h4 id="ulowienasmiglo85ty-4">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>Wiesz co, nie wiem, jak wy dajecie radę z tymi waszymi przynętami, ale na pewno nie zbliżacie się do mojego poziomu. Może kiedyś uda wam się coś większego złapać – jeśli nie będziecie tak xxxxx gadać cały czas.<br/></p>
+<br/>
+<hr/>
+<h4 id="uszczupak_krol_wod-3">u/<strong>szczupak_krol_wod</strong>:</h4>
+<p>Dobra, dość gadania. W końcu trzeba wrócić nad wodę, bo jak wy nie potraficie łowić, to zawsze mogę wam pokazać, jak to się robi! Choć wiem, że zaraz znowu zaczniecie się kłócić, kto lepszy.<br/></p>
+<br/>
+<hr/>
+<h3 id="wątek-karasie-jedzą">Wątek: Karasie Jedzą *****</h3>
+<h4 id="ulowienasmiglo85ty-5">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>xxxxx karasie, jedza xxxxx zadnych normalych ryb przez te xxxxx zlapac nie moge, xxxxxx do stawu itak sie jakis znajdzie<br/></p>
+<br/>
+<hr/>
+<h4 id="ukrolpustychrak">u/<strong>KrolPustychRak</strong>:</h4>
+<p>Co ty xxxxxx, człowieku?! Karasie nie jedzą xxxxxx! To są ryby, które łowią się na porządne przynęty, a nie na twoje xxxxx komentarze! Nawet woda, w której łowisz, chyba ci szkodzi!<br/></p>
+<br/>
+<hr/>
+<h4 id="umistrzprzypalow">u/<strong>MistrzPrzypalow</strong>:</h4>
+<p>O xxxxx, co za xxxxx! Jak można coś takiego napisać? Całe forum zaraz cię zjedzie! Karasie to porządne ryby, a nie jakieś padliny! Ty chyba mylisz je z czymś, co sam połknąłeś!<br/></p>
+<br/>
+<hr/>
+<h4 id="uzłotareka">u/<strong>ZłotaReka</strong>:</h4>
+<p>Po pierwsze, nie wiem, jak ty w ogóle na karasiach chcesz łowić, jak nie rozumiesz, czym się karmią! I nie, nie jedzą xxxxx, tylko naturalne pokarmy wodne. Ale widać, że się nie znasz. Może sięgnij po książkę o rybach, zanim znowu coś napiszesz.<br/></p>
+<br/>
+<hr/>
+<h4 id="ulowienasmiglo85ty-6">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>Ej, no! Spokojnie! To tylko moje doświadczenie z wody, no i może troszkę przesadziłem, ale nie rozumiem, czemu wszyscy od razu tak na mnie lecą. Woda pełna jest różnych rzeczy, a ryby się do nich przyzwyczajają. Dajcie spokój!<br/></p>
+<br/>
+<hr/>
+<h4 id="ukrolpustychrak-1">u/<strong>KrolPustychRak</strong>:</h4>
+<p>Ty to masz naprawdę coś z głową! Jak można takie rzeczy pisać na forum?! Karasie to ryby, które trzeba szanować! Jak chcesz rozmawiać o wędkarstwie, to przynajmniej nie bądź takim debilem, bo cię wszyscy zjedzą! U nas na forum to nie przejdzie, mądralo.<br/></p>
+<br/>
+<hr/>
+<h4 id="umistrzprzypalow-1">u/<strong>MistrzPrzypalow</strong>:</h4>
+<p>Nie wiem, co ty bierzesz, ale zabierz to z powrotem, bo twoje głupoty zaczynają przeszkadzać. Karasie to ryby, a nie śmieci, które jedzą to, co znajdą w wodzie. Jeśli chcesz, to ci wyślę filmik o tym, jak je łowić, żebyś nie musiał się już kompromitować!<br/></p>
+<br/>
+<hr/>
+<h4 id="uzlotareka">u/<strong>ZlotaReka</strong>:</h4>
+<p>Takie teksty jak twój tylko psują atmosferę na forum. Serio, po tym co napisałeś, to chyba lepiej, żebyś dał sobie spokój z wędkarstwem. Woda to nie jest miejsce na żarty, a ryby zasługują na szacunek.<br/></p>
+<br/>
+<hr/>
+<h4 id="ulowienasmiglo85ty-7">u/<strong>lowieNaSmiglo85</strong>(ty):</h4>
+<p>Dobra, dobra, nie chcecie się bawić w dyskusję, to się wycofuję. Sorki, że was wkurzyłem, może źle to ująłem, ale na pewno nie miałem złych intencji. Po prostu chciałem się podzielić swoimi doświadczeniami z wody, no ale widać, że to temat kontrowersyjny.<br/></p>
+<br/>
+<hr/>
+<h4 id="ukrolpustychrak-2">u/<strong>KrolPustychRak</strong>:</h4>
+<p>No tak, z każdą głupotą się tłumaczysz. Jak chcesz tu pisać, to pamiętaj, że wędkarze to ludzie, którzy szanują ryby. Jeśli nie potrafisz tego zrozumieć, to chyba nie masz czego szukać na tym forum!<br/></p>
+<br/>
+<hr/>
+<h4 id="umistrzprzypalow-2">u/<strong>MistrzPrzypalow</strong>:</h4>
+<p>Mimo wszystko, mam nadzieję, że nie będziesz teraz pisał o tym, jak ‘super’ jedzą ryby, bo wszyscy to widzimy, jak się zachowujesz. W przyszłości trzymaj takie ‘doświadczenia’ dla siebie, co?<br/></p>
+<br/>
+<hr/>
+<h4 id="uzlotareka-1">u/<strong>ZlotaReka</strong>:</h4>
+<p>Miejmy nadzieję, że następnym razem, jak się podzielisz czymś na forum, nie będzie to takie xxxxx. I lepiej, żeby to były bardziej mądre przemyślenia o rybach, a nie jakieś bzdury!<br/></p>
+<br/>
+<hr/> </div> </div>   </div> </div> <script>(function(){const id = "forum";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -233,7 +337,27 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="fish"> <div class="window-bar"> <p class="window-bar-close" id="fish-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Atlas ryb</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="fishmd">fish.md</h1> </div>  </div> </div> <script>(function(){const id = "fish";
+})();</script> <div class="window" id="fish"> <div class="window-bar"> <p class="window-bar-close" id="fish-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Atlas ryb</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <p><p class="error">ERROR</p>:  Data formatting disrupted by external service. Possible interference: “cebulka.org”.</p>
+<h1 id="top-10-6-ryb">TOP <del>10</del> 6 RYB</h1>
+<hr/>
+<h2 id="1-toubra">1. Tou<em><strong>B</strong></em>ra</h2>
+<p>Drapieżna ryba morska o smukłym ciele i agresywnym zachowaniu. Żyje w wodach Oceanu Indyjskiego i Morza Czerwonego. Posiada wydłużony pysk oraz ostre płetwy grzbietowe.</p>
+<hr/>
+<h2 id="2-kubla">2. K<em><strong>U</strong></em>bla</h2>
+<p>Mała ryba słodkowodna, znana z przebywania w strumieniach i małych jeziorach. Jej ciało ma srebrzysto-błękitne refleksy. Często wybierana przez wędkarzy w Europie Środkowej.</p>
+<hr/>
+<h2 id="3-filbur">3. Fi<em><strong>L</strong></em>bur</h2>
+<p>Tropikalna ryba słodkowodna o niezwykłych wzorach na łuskach. Żyje w Amazonce i jej dopływach. Preferuje spokojne wody i bujną roślinność podwodną.</p>
+<hr/>
+<h2 id="4-albuba">4. Al<em><strong>B</strong></em>uba</h2>
+<p>Egzotyczna ryba akwariowa o intensywnych barwach. Pochodzi z Azji Południowo-Wschodniej. Lubi ciepłe i dobrze natlenione wody.</p>
+<hr/>
+<h2 id="5-subila">5. S<em><strong>U</strong></em>bila</h2>
+<p>Słodkowodna ryba z rodziny karpiowatych. Znana ze swoich lśniących łusek i dużej płetwy ogonowej. Występuje głównie w Azji.</p>
+<hr/>
+<h2 id="6-tuliba">6. Tu<em><strong>L</strong></em>iba</h2>
+<p>Ryba morska żyjąca w wodach północnego Atlantyku. Cechuje się silnym ciałem i długą płetwą grzbietową. Często łowiona przez rybaków na duże połowy.</p>
+<hr/> </div>  </div> </div> <script>(function(){const id = "fish";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -250,24 +374,55 @@
             tab.style.position = "absolute";
         }
     }
-})();</script> <div class="window" id="library"> <div class="window-bar"> <p class="window-bar-close" id="library-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Libary</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="librarymd">library.md</h1> </div>  </div> </div> <script>(function(){const id = "library";
-
-    document.getElementById(`${id}-close`).addEventListener("click", close_window);
-    function close_window() {
-        let temp = document.getElementById(id);
-        if(temp) {
-            temp.style.opacity = "0";
-            temp.style.pointerEvents = "none";
-        }
-
-        let tab = document.getElementById(`${id}-tab`);
-        if(tab) {
-            tab.style.opacity = "0";
-            tab.style.pointerEvents = "none";
-            tab.style.position = "absolute";
-        }
-    }
-})();</script> <div class="window" id="securedrop"> <div class="window-bar"> <p class="window-bar-close" id="securedrop-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Secure Drop</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="securedropmd">securedrop.md</h1> </div>  </div> </div> <script>(function(){const id = "securedrop";
+})();</script> <div class="window" id="library"> <div class="window-bar"> <p class="window-bar-close" id="library-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">Onionshare</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <div class="web-prompt">
+użytkownik: <p>cebulka-admin</p> hasło:
+<input id="login-library" type="text"> <button id="login-library-button">></button> </div> <div id="library-div"> <h1 id="onionshare-ftp-server">OnionShare FTP Server</h1>
+<p>Welcome to <strong>OnionShare FTP Server</strong>. This is a simple, secure, and anonymous way to share files over Tor.</p>
+<h2 id="downloadable-files">Downloadable Files:</h2>
+<hr/>
+<ul>
+<li><strong>TOUHOU MUSIC</strong> - <code>touhou.txz</code>
+<ul>
+<li><strong>Description</strong>: Touhou Music</li>
+<li><strong>Size</strong>: 4.4 TB</li>
+<li><strong>Status</strong>: <strong>Locked</strong></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>LOG VIEWER</strong> - <code>log-viewer-v0.3a.exe</code>
+<ul>
+<li><strong>Description</strong>: Universal base64 encoder-decoder</li>
+<li><strong>Size</strong>: 132.5 MB</li>
+<li><strong>Status</strong>: <strong>Available</strong></li>
+<li>
+<button id="show-logs-button">Click here to Download</button>
+</li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>TOOLBOX</strong> - <code>toolbox.exe</code>
+<ul>
+<li><strong>Description</strong>: Universal base64 encoder-decoder</li>
+<li><strong>Size</strong>: 18.8 MB</li>
+<li><strong>Status</strong>: <strong>Locked</strong></li>
+</ul>
+</li>
+</ul>
+<hr/>
+<ul>
+<li><strong>SECRET</strong> - <code>secret.zip</code>
+<ul>
+<li><strong>Description</strong>: Zip with very cool stuff!!! :3 (password)</li>
+<li><strong>Size</strong>: 33.0 MB</li>
+<li><strong>Status</strong>: <strong>Locked</strong></li>
+</ul>
+</li>
+</ul>
+<hr/> </div> </div>   </div> </div> <script>(function(){const id = "library";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -285,7 +440,23 @@
         }
     }
 })();</script> <div class="window" id="daytoday"> <div class="window-bar"> <p class="window-bar-close" id="daytoday-close" style="margin-right: 5px; cursor: pointer;">X</p> <p style="pointer-events: none;">0day.today</p> </div> <div style="overflow-y: scroll; height: 420px;">  <div class="webbrowser"> <h1 id="0daytoday">0day.today</h1>
-<hr/> </div>  </div> </div> <script>(function(){const id = "daytoday";
+<hr/>
+<h2 id="szyfr-cezara">Szyfr cezara</h2>
+<p>Szyfr Cezara, który wykorzystuje przesunięcie o 3 miejsca, jest jednym z najprostszych narzędzi szyfrujących stosowanych w historii kryptografii. Jest to forma szyfru podstawowego, gdzie każda litera w wiadomości jest zastępowana literą, która znajduje się o kilka miejsc dalej w alfabecie. <br/>
+Ciekawostką jest, że podobny szyfr Cezara może być wykorzystywany w zapleczu technicznym strony <strong>cebulka.org</strong>, gdzie podobno stosuje się go do szyfrowania danych. <br/></p>
+<table><tbody><tr style="vertical-align:top"><th scope="row">  Plain</th><td>  A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td><td>X</td><td>Y</td><td>Z</td></tr><tr style="vertical-align:top"><th scope="row">  Cipher</th><td> X</td><td>Y</td><td>Z</td><td>A</td><td>B</td><td>C</td><td>D</td><td>E</td><td>F</td><td>G</td><td>H</td><td>I</td><td>J</td><td>K</td><td>L</td><td>M</td><td>N</td><td>O</td><td>P</td><td>Q</td><td>R</td><td>S</td><td>T</td><td>U</td><td>V</td><td>W</td></tr></tbody></table>
+<hr/>
+<h2 id="jak-odszyfrować-dane-z-logów-systemowych-za-pomocą-base64">Jak odszyfrować dane z logów systemowych za pomocą Base64?</h2>
+<p>W systemach operacyjnych logi często zawierają informacje, które są zakodowane w różnych formatach, aby zapewnić ich kompaktowość lub czytelność dla maszyn. Jednym z takich formatów jest Base64 – prosty schemat kodowania, który przekształca dane binarne w czytelny ciąg znaków.<br/></p>
+<h3 id="czym-jest-base64">Czym jest Base64?</h3>
+<p>Base64 to metoda kodowania, która zamienia dane binarne w tekst składający się z liter, cyfr oraz kilku znaków specjalnych. Dzięki temu łatwiej jest przesyłać dane w formatach tekstowych, takich jak logi systemowe czy protokoły internetowe.<br/></p>
+<h3 id="jak-rozpoznać-base64-w-logach">Jak rozpoznać Base64 w logach?</h3>
+<p>Zakodowane dane w Base64 mają charakterystyczny wygląd: <br/></p>
+<ul>
+<li>Są ciągiem liter (A-Z, a-z), cyfr (0-9) i znaków takich jak +, / oraz =.</li>
+<li>Zwykle nie zawierają spacji ani znaków specjalnych (poza wyżej wymienionymi).</li>
+<li>Mają długość będącą wielokrotnością 4 znaków.</li>
+</ul> </div>  </div> </div> <script>(function(){const id = "daytoday";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -302,4 +473,4 @@
             tab.style.position = "absolute";
         }
     }
-})();</script>  </div> </div> <div class="taskbar"> <div style="display: flex;"> <!-- NIE RUSZAĆ BO DZIAŁA -->  <div class="taskbar-tab" id="webbrowser-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Web Browser</p> </div> <div class="taskbar-tab" id="archives-tab"> <img src="./archives.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Archives</p> </div> <div class="taskbar-tab" id="logs-tab"> <img src="./logs.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">System logs</p> </div> <div class="taskbar-tab" id="forum-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Cebulka</p> </div> <div class="taskbar-tab" id="fish-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Atlas Ryb</p> </div> <div class="taskbar-tab" id="library-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Open Library</p> </div> <div class="taskbar-tab" id="securedrop-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">SecureDrop</p> </div> <div class="taskbar-tab" id="daytoday-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">0day.today</p> </div>  </div> </div>  </body></html> 
+})();</script>  </div> </div> <div class="taskbar"> <div style="display: flex;"> <!-- NIE RUSZAĆ BO DZIAŁA -->  <div class="taskbar-tab" id="webbrowser-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Web Browser</p> </div> <div class="taskbar-tab" id="logs-tab"> <img src="./logs.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">System logs</p> </div> <div class="taskbar-tab" id="forum-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Cebulka</p> </div> <div class="taskbar-tab" id="fish-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Atlas Ryb</p> </div> <div class="taskbar-tab" id="library-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Onionshare</p> </div> <div class="taskbar-tab" id="daytoday-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">0day.today</p> </div>  </div> </div>  </body></html> 
