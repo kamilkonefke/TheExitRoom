@@ -8,30 +8,21 @@ import Tab from '../components/taskbar_tab.astro';
 import Login from '../components/pasword_prompt.astro';
 
 import WebBrowser from './content/webbrowser.astro';
-import Archives from './content/archives.astro';
 import Logs from './content/logs.astro';
 
 import Fish from './content/fish.astro';
-import Shark from './content/shark.astro';
 import Forum from './content/forum.astro';
 import Library from './content/library.astro';
-import SecureDrop from './content/securedrop.astro';
 import DayToday from './content/daytoday.astro';
-import Buttonme from './content/buttonme.astro';
 ---
 
 <Main>
     <Desktop>
         <Shortcut name="Web Browser" id="webbrowser" img="./webbrowser.svg"/>
-        <Shortcut name="Archives" id="archives" img="./archives.svg"/>
         <Shortcut name="System logs" id="logs" img="./logs.svg"/>
 
         <Window name="Web Browser" id="webbrowser">
             <WebBrowser></WebBrowser>
-        </Window>
-
-        <Window name="Archives" id="archives">
-            <Archives></Archives>
         </Window>
 
         <Window name="System logs" id="logs">
@@ -46,44 +37,29 @@ import Buttonme from './content/buttonme.astro';
             <Fish></Fish>
         </Window>
 
-        <Window name="Sharkopedia" id="shark">
-            <Shark></Shark>
-        </Window>
-
-        <Window name="Libary" id="library">
+        <Window name="Onionshare" id="library">
             <Library></Library>
-        </Window>
-
-        <Window name="Secure Drop" id="securedrop">
-            <SecureDrop></SecureDrop>
         </Window>
 
         <Window name="0day.today" id="daytoday">
             <DayToday></DayToday>
         </Window>
-
-        <Window name="Button.me" id="buttonme">
-            <Buttonme></Buttonme>
-        </Window>
     </Desktop>
 
     <Taskbar>
         <Tab name="Web Browser" id="webbrowser" img="./webbrowser.svg"/>
-        <Tab name="Archives" id="archives" img="./archives.svg"/>
         <Tab name="System logs" id="logs" img="./logs.svg"/>
 
         <Tab name="Cebulka" id="forum" img="./webbrowser.svg"/>
         <Tab name="Atlas Ryb" id="fish" img="./webbrowser.svg"/>
-        <Tab name="Open Library" id="library" img="./webbrowser.svg"/>
-        <Tab name="SecureDrop" id="securedrop" img="./webbrowser.svg"/>
+        <Tab name="Onionshare" id="library" img="./webbrowser.svg"/>
         <Tab name="0day.today" id="daytoday" img="./webbrowser.svg"/>
-        <Tab name="Button.me" id="buttonme" img="./webbrowser.svg"/>
     </Taskbar>
 </Main>
 
 <script>
     function hide_shortcuts() {
-        const archives = document.getElementById("archives-btn");
+        const archives = document.getElementById("logs-btn");
         if(archives) {
             archives.style.opacity = "0";
             archives.style.pointerEvents = "none";

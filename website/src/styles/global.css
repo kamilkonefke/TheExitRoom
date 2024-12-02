@@ -1,35 +1,35 @@
-.webbrowser, #shark-div, #forum-div {
+.webbrowser, #shark-div, #forum-div, #library-div {
   color: #4c4f69;
   height: 100%;
   padding: 2px;
   margin: 0px 10px;
   text-align: left; }
-  .webbrowser > h1, #shark-div > h1, #forum-div > h1 {
+  .webbrowser > h1, #shark-div > h1, #forum-div > h1, #library-div > h1 {
     color: #d20f39;
     text-align: center; }
-  .webbrowser > h2, #shark-div > h2, #forum-div > h2 {
+  .webbrowser > h2, #shark-div > h2, #forum-div > h2, #library-div > h2 {
     color: #fe640b;
     text-align: center; }
-  .webbrowser > h3, #shark-div > h3, #forum-div > h3 {
+  .webbrowser > h3, #shark-div > h3, #forum-div > h3, #library-div > h3 {
     color: #df8e1d;
     text-align: center; }
-  .webbrowser > h4, #shark-div > h4, #forum-div > h4 {
+  .webbrowser > h4, #shark-div > h4, #forum-div > h4, #library-div > h4 {
     color: #40a02b;
     text-align: center; }
-  .webbrowser > h5, #shark-div > h5, #forum-div > h5 {
+  .webbrowser > h5, #shark-div > h5, #forum-div > h5, #library-div > h5 {
     color: #1e66f5;
     text-align: center; }
-  .webbrowser > h6, #shark-div > h6, #forum-div > h6 {
+  .webbrowser > h6, #shark-div > h6, #forum-div > h6, #library-div > h6 {
     color: #8839ef;
     text-align: center; }
-  .webbrowser > p, #shark-div > p, #forum-div > p {
+  .webbrowser > p, #shark-div > p, #forum-div > p, #library-div > p {
     color: #4c4f69;
     display: inline; }
-  .webbrowser > .error, #shark-div > .error, #forum-div > .error {
+  .webbrowser > .error, #shark-div > .error, #forum-div > .error, #library-div > .error {
     color: #d20f39; }
-  .webbrowser > .warning, #shark-div > .warning, #forum-div > .warning {
+  .webbrowser > .warning, #shark-div > .warning, #forum-div > .warning, #library-div > .warning {
     color: #df8e1d; }
-  .webbrowser > .info, #shark-div > .info, #forum-div > .info {
+  .webbrowser > .info, #shark-div > .info, #forum-div > .info, #library-div > .info {
     color: #40a02b; }
 
 .link-name {
