@@ -1,1 +1,0 @@
-let e=document.getElementById("forum-div");e&&(e.style.opacity="0");const o="bulbul";document.getElementById("login-forum-button")?.addEventListener("click",n);function n(){let t=document.getElementById("login-forum");t&&t.value.toLowerCase()==o&&e&&(e.style.opacity="1")}

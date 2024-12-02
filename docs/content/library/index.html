@@ -1,4 +1,4 @@
-<!DOCTYPE html><script type="module" src="/_astro/hoisted.CZI8NJ7S.js"></script><div class="webbrowser"> <div class="web-prompt">
+<!DOCTYPE html><div class="webbrowser"> <div class="web-prompt">
 użytkownik: <p>cebulka-admin</p> hasło:
 <input id="login-library" type="text"> <button id="login-library-button">></button> </div> <div id="library-div"> <h1 id="onionshare-ftp-server">OnionShare FTP Server</h1>
 <p>Welcome to <strong>OnionShare FTP Server</strong>. This is a simple, secure, and anonymous way to share files over Tor.</p>
@@ -46,4 +46,32 @@ użytkownik: <p>cebulka-admin</p> hasło:
 </ul>
 </li>
 </ul>
-<hr/> </div> </div> 
+<hr/> </div> </div> <script>
+    let e = document.getElementById("library-div");
+    if(e) {
+        e.style.opacity = "0";
+    }
+
+    const passwd = "karpie";
+    document.getElementById("login-library-button")?.addEventListener("click", check_lib_password);
+    function check_lib_password() {
+        console.log("ae")
+        let input = document.getElementById("login-library");
+        if(input) {
+            if(input.value.toLowerCase() == passwd) {
+                if(e) {
+                    e.style.opacity = "1";
+                }
+            }
+        }
+    }
+    document.getElementById("show-logs-button")?.addEventListener("click", open_logs);
+    function open_logs() {
+        let logs_shortcut = document.getElementById("logs-btn");
+        if(logs_shortcut) {
+            logs_shortcut.style.pointerEvents = "all";
+            logs_shortcut.style.opacity = "1";
+            logs_shortcut.style.position = "unset";
+        }
+    }
+</script>

@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.16"><title>OS</title><script type="module" src="/_astro/hoisted.B5MVnabw.js"></script></head> <body>  <div class="desktop"> <div>  <div class="desktop-shortcut" id="webbrowser-btn"> <img src="./webbrowser.svg" class="desktop-shortcut-img"> <p class="desktop-shortcut-text">Web Browser</p> </div> <script>(function(){const id = "webbrowser";
+<!DOCTYPE html><html lang="pl"> <head><meta charset="utf-8"><link rel="stylesheet" href="global.css"><meta name="viewport" content="width=device-width"><meta name="generator" content="Astro v4.16.16"><title>OS</title></head> <body>  <div class="desktop"> <div>  <div class="desktop-shortcut" id="webbrowser-btn"> <img src="./webbrowser.svg" class="desktop-shortcut-img"> <p class="desktop-shortcut-text">Web Browser</p> </div> <script>(function(){const id = "webbrowser";
 
     document.getElementById(`${id}-btn`).addEventListener("click", open_window);
 
@@ -320,7 +320,25 @@ Użytkownik: <p>lowieNaSmiglo85</p> Hasło:
 <h4 id="uzlotareka-1">u/<strong>ZlotaReka</strong>:</h4>
 <p>Miejmy nadzieję, że następnym razem, jak się podzielisz czymś na forum, nie będzie to takie xxxxx. I lepiej, żeby to były bardziej mądre przemyślenia o rybach, a nie jakieś bzdury!<br/></p>
 <br/>
-<hr/> </div> </div>   </div> </div> <script>(function(){const id = "forum";
+<hr/> </div> </div> <script>
+    let a = document.getElementById("forum-div");
+    if(a) {
+        a.style.opacity = "0";
+    }
+
+    const passwd1 = "bulbul";
+    document.getElementById("login-forum-button")?.addEventListener("click", check_password);
+    function check_password() {
+        let input = document.getElementById("login-forum");
+        if(input) {
+            if(input.value.toLowerCase() == passwd1) {
+                if(a) {
+                    a.style.opacity = "1";
+                }
+            }
+        }
+    }
+</script>  </div> </div> <script>(function(){const id = "forum";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -422,7 +440,35 @@ użytkownik: <p>cebulka-admin</p> hasło:
 </ul>
 </li>
 </ul>
-<hr/> </div> </div>   </div> </div> <script>(function(){const id = "library";
+<hr/> </div> </div> <script>
+    let e = document.getElementById("library-div");
+    if(e) {
+        e.style.opacity = "0";
+    }
+
+    const passwd = "karpie";
+    document.getElementById("login-library-button")?.addEventListener("click", check_lib_password);
+    function check_lib_password() {
+        console.log("ae")
+        let input = document.getElementById("login-library");
+        if(input) {
+            if(input.value.toLowerCase() == passwd) {
+                if(e) {
+                    e.style.opacity = "1";
+                }
+            }
+        }
+    }
+    document.getElementById("show-logs-button")?.addEventListener("click", open_logs);
+    function open_logs() {
+        let logs_shortcut = document.getElementById("logs-btn");
+        if(logs_shortcut) {
+            logs_shortcut.style.pointerEvents = "all";
+            logs_shortcut.style.opacity = "1";
+            logs_shortcut.style.position = "unset";
+        }
+    }
+</script>  </div> </div> <script>(function(){const id = "library";
 
     document.getElementById(`${id}-close`).addEventListener("click", close_window);
     function close_window() {
@@ -473,4 +519,93 @@ Ciekawostką jest, że podobny szyfr Cezara może być wykorzystywany w zapleczu
             tab.style.position = "absolute";
         }
     }
-})();</script>  </div> </div> <div class="taskbar"> <div style="display: flex;"> <!-- NIE RUSZAĆ BO DZIAŁA -->  <div class="taskbar-tab" id="webbrowser-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Web Browser</p> </div> <div class="taskbar-tab" id="logs-tab"> <img src="./logs.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">System logs</p> </div> <div class="taskbar-tab" id="forum-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Cebulka</p> </div> <div class="taskbar-tab" id="fish-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Atlas Ryb</p> </div> <div class="taskbar-tab" id="library-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Onionshare</p> </div> <div class="taskbar-tab" id="daytoday-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">0day.today</p> </div>  </div> </div>  </body></html> 
+})();</script>  </div> </div> <div class="taskbar"> <div style="display: flex;"> <!-- NIE RUSZAĆ BO DZIAŁA -->  <div class="taskbar-tab" id="webbrowser-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Web Browser</p> </div> <div class="taskbar-tab" id="logs-tab"> <img src="./logs.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">System logs</p> </div> <div class="taskbar-tab" id="forum-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Cebulka</p> </div> <div class="taskbar-tab" id="fish-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Atlas Ryb</p> </div> <div class="taskbar-tab" id="library-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">Onionshare</p> </div> <div class="taskbar-tab" id="daytoday-tab"> <img src="./webbrowser.svg" class="taskbar-tab-img"> <p class="taskbar-tab-text">0day.today</p> </div>  </div> </div>  </body></html> <script>
+    function hide_shortcuts() {
+        let archives = document.getElementById("logs-btn");
+        if(archives) {
+            archives.style.opacity = "0";
+            archives.style.pointerEvents = "none";
+            archives.style.position = "absolute";
+        }
+    }
+
+    function hide_tabs() {
+        let tabs = document.querySelectorAll<HTMLElement>(".taskbar-tab");
+        if(tabs) {
+            tabs.forEach(element => {
+                element.style.opacity = "0";
+                element.style.pointerEvents = "none";
+                element.style.position = "absolute";
+            });
+        }
+    }
+
+    function hide_windows() {
+        let windows = document.querySelectorAll(".window");
+        if(windows) {
+            windows.forEach(element => {
+                element.style.opacity = "0";
+                element.style.pointerEvents = "none";
+            });
+        }
+
+        // Hide all tabs
+        let tabs = document.querySelectorAll(".taskbar-tab");
+        if(tabs) {
+            tabs.forEach(element => {
+                element.style.opacity = "0";
+                element.style.pointerEvents = "none";
+                element.style.position = "absolute";
+            });
+        }
+    }
+
+    // Drag and drop window
+    let pos_x;
+    let pos_y;
+
+    let current_window;
+    let all_windows = document.querySelectorAll(".window-bar");
+    if(all_windows) {
+        all_windows.forEach(element => {
+            element.addEventListener("mousedown", start_drag);
+            element.addEventListener("mouseup", stop_drag);
+        });
+    }
+    function start_drag(e) {
+        current_window = (e.target).parentNode;
+        if(current_window) {
+            let rect = current_window.getBoundingClientRect();
+            pos_y = e.clientY - rect.top;
+            pos_x = e.clientX - rect.left;
+            // z-index
+            apply_z_index(+current_window.style.zIndex, current_window);
+        }
+        window.addEventListener("mousemove", drag, true);
+    }
+
+    function drag(e) {
+        if(current_window) {
+            current_window.style.top = `${e.clientY - pos_y}px`;
+            current_window.style.left = `${e.clientX - pos_x}px`;
+        }
+    }
+
+    function stop_drag() {
+        window.removeEventListener("mousemove", drag, true);
+        current_window = null;
+    }
+
+    let z_index_max = 1;
+    function apply_z_index(z, win) {
+        if(z <= z_index_max) {
+            let x = (z_index_max + 1);
+            win.style.zIndex = x.toString();
+            z_index_max = x;
+        }
+    }
+
+    hide_windows();
+    hide_tabs();
+    hide_shortcuts();
+</script>

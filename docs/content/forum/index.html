@@ -1,4 +1,4 @@
-<!DOCTYPE html><script type="module" src="/_astro/hoisted.hrMYzFSE.js"></script><div class="webbrowser"> <div class="web-prompt">
+<!DOCTYPE html><div class="webbrowser"> <div class="web-prompt">
 Użytkownik: <p>lowieNaSmiglo85</p> Hasło:
 <input id="login-forum" type="text"> <button id="login-forum-button">></button> </div> <div id="forum-div"> <h1 id="cebulka-rwędkarstwo">Cebulka r/wędkarstwo</h1>
 <p><p class="error">ERROR</p>: System zidentyfikował poważne niezgodności w danych! Proszę <del>nie</del> ignorować – <del>odśwież</del> stronę natychmiast, aby uniknąć nieodwracalnych błędów wizualnych i utraty dostępu! <br/>
@@ -107,4 +107,22 @@ Użytkownik: <p>lowieNaSmiglo85</p> Hasło:
 <h4 id="uzlotareka-1">u/<strong>ZlotaReka</strong>:</h4>
 <p>Miejmy nadzieję, że następnym razem, jak się podzielisz czymś na forum, nie będzie to takie xxxxx. I lepiej, żeby to były bardziej mądre przemyślenia o rybach, a nie jakieś bzdury!<br/></p>
 <br/>
-<hr/> </div> </div> 
+<hr/> </div> </div> <script>
+    let a = document.getElementById("forum-div");
+    if(a) {
+        a.style.opacity = "0";
+    }
+
+    const passwd1 = "bulbul";
+    document.getElementById("login-forum-button")?.addEventListener("click", check_password);
+    function check_password() {
+        let input = document.getElementById("login-forum");
+        if(input) {
+            if(input.value.toLowerCase() == passwd1) {
+                if(a) {
+                    a.style.opacity = "1";
+                }
+            }
+        }
+    }
+</script>
